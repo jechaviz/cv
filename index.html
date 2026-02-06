@@ -101,27 +101,34 @@
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
       background: var(--sidebar-background) !important;
+      padding-top: 0 !important;
+      /* Force 0 top padding */
     }
 
     /* Fixed/Sticky Sidebar Header */
     .sidebar>h1 {
       position: sticky;
       top: 0;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      /* Extremely high priority */
       background: var(--sidebar-background) !important;
       margin: 0 !important;
       padding: 0 !important;
       border-bottom: 1px solid var(--glass-border);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .sidebar>h1 a {
       display: block;
-      padding: 0 0 10px 0 !important;
+      padding: 10px 0 5px 0 !important;
+      /* Minimal internal padding */
       /* Absolute top start */
       background: var(--sidebar-background) !important;
       text-decoration: none;
       color: inherit;
+      margin: 0 !important;
     }
 
     .sidebar>h1 a:hover {
