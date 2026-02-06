@@ -107,13 +107,20 @@
     .sidebar>h1 {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: var(--sidebar-background);
+      z-index: 100;
+      background: var(--sidebar-background) !important;
       margin: 0 !important;
-      padding: 30px 0 10px 0 !important;
+      padding: 0 !important;
       border-bottom: 1px solid var(--glass-border);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      /* Use drop shadow to make the separation clearer */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar>h1 a {
+      display: block;
+      padding: 30px 0 10px 0 !important;
+      background: var(--sidebar-background) !important;
+      text-decoration: none;
     }
 
     .sidebar-nav li.active>a {
