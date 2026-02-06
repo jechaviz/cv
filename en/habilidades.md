@@ -3,7 +3,7 @@
 ### Coding Paradigms
 * Test Driven Development (TDD)
 * AOP & OOP Best Practices
-* Microservices & Hexagonal Architecture
+* Microservices, Clean Architecture, Design Patterns, Hexagonal Architecture
 
 ### Languages and Frameworks
 * **Python (Expert/Senior):** High performance AsyncIO, Pydantic v2, FastAPI, Django, Flask.

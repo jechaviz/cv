@@ -1,8 +1,8 @@
 # Proyectos y Experiencias Seleccionados
 
 ### PROYECTO DESTACADO: SOFTWARE DE FACTURACIÓN MEXICANO
-* **Descripción:** Creación de un sistema CLI de alta complejidad con Java y Spring.
-* **Retos Superados:** Criptografía, firma XML, configuración SFTP, mapeo de datos complejos, XSLT, XPath y Regex.
+* **Descripción:** Creación de un sistema CLI para Facturación Electrónica en México con Java y Spring Boot.
+* **Retos Superados:** Criptografía, firma XML, configuración SFTP, parseo de datos complejos, XSLT, XPath y Regex.
 
 ---
 
@@ -22,7 +22,7 @@
 ---
 
 ### AUTOMATIZACIÓN DE GESTIÓN TÉCNICA
-* **Análisis de Código:** Desarrollo de scripts en **Python (AST)** para el análisis de topología de microservicios y generación automática de documentación técnica.
+* **Análisis de Código:** Desarrollo de scripts en **Python (AST)** para el análisis de repositorios existentes y generación automática de documentación técnica.
 * **Ecosistema de Trabajo:** Automatización de flujos en Jira, Slack y Teams mediante bots personalizados para seguimiento de tareas y alertas de producción.
 * **Gobierno y Seguridad:** Implementación de políticas de desarrollo seguro y entornos estandarizados mediante scripts de validación.
 
@@ -45,7 +45,7 @@
 ---
 
 ### ALGO-TRADING Y AUTOMATIZACIÓN
-* **Experiencia:** Desarrollo de 3 robots de trading para clientes individuales y más de 30 modelos propios industriales para clientes globales (Suiza, Canadá, México).
+* **Experiencia:** Desarrollo de 3 robots de trading para clientes individuales (Suiza, Canadá, México) y más de 30 modelos propios para analisis de mercado y trading.
 * **Stack:** Java/Python, MetaTrader 5 (MQL5), PineScript.
 
 ---

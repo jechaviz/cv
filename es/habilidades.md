@@ -3,7 +3,7 @@
 ### Paradigmas de Codificación
 * Desarrollo dirigido por pruebas (TDD)
 * Mejores prácticas de AOP y OOP
-* Microservicios y Arquitectura Hexagonal
+* Microservicios, Arquitectura Limpia, Patrones de Diseño, Arquitectura Hexagonal
 
 ### Lenguajes y Frameworks
 * **Python (Expert/Senior):** High performance AsyncIO, Pydantic v2, FastAPI, Django, Flask.

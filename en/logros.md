@@ -1,8 +1,8 @@
 # Selected Projects and Experiences
 
 ### FEATURED PROJECT: MEXICAN ELECTRONIC BILLING SOFTWARE
-* **Description:** Creation of a high-complexity CLI system with Java and Spring.
-* **Challenges Overcome:** Cryptography, XML signature, SFTP configuration, complex data mapping, XSLT, XPath, and Regex.
+* **Description:** Creation of a CLI system for Electronic Billing in Mexico with Java and Spring Boot.
+* **Challenges Overcome:** Cryptography, XML signature, SFTP configuration, complex data parsing, XSLT, XPath, and Regex.
 
 ---
 
@@ -21,7 +21,7 @@
 ---
 
 ### TECHNICAL MANAGEMENT AUTOMATION
-* **Code Analysis:** Development of scripts in **Python (AST)** for microservices topology analysis and automatic generation of technical documentation.
+* **Code Analysis:** Development of scripts in **Python (AST)** for existing repository analysis and automatic generation of technical documentation.
 * **Work Ecosystem:** Workflow automation in Jira, Slack, and Teams using custom bots for task tracking and production alerts.
 * **Governance and Security:** Implementation of secure development policies and standardized environments through validation scripts.
 
@@ -42,7 +42,7 @@
 ---
 
 ### ALGO-TRADING AND AUTOMATION
-* **Experience:** Development of 3 trading robots for individual customers and more than 30 industrial proprietary models for global clients (Switzerland, Canada, Mexico).
+* **Experience:** Development of 3 trading robots for individual customers (Switzerland, Canada, Mexico) and more than 30 proprietary models for market analysis and trading.
 * **Stack:** Java/Python, MetaTrader 5 (MQL5), PineScript.
 
 ---
