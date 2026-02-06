@@ -69,7 +69,7 @@ Requiero mi curriculum en docsify con lo siguiente (solo se muestra una parte co
 
 CV. Aquí encontrarás el desglose de mi trayectoria de más de 13 años liderando equipos técnicos y diseñando arquitecturas complejas, con un enfoque especial en **Python**, **Java** y **Arquitectura de Nube**.
 
-Este sitio sigue la estructura de desarrollo profesional detallada para facilitar la revisión de proyectos específicos.
+
 
 ```
 
