@@ -8,11 +8,11 @@
 
 ### ESPECIFICACIONES TÉCNICAS
 * **Lenguajes:** Python (Expert/Senior), Java (Senior), PHP (Senior), JS/TS (Senior), MQL5, SQL.
-* **Backend:** FastAPI, Django, Flask, Spring Boot, Laravel, Node.js, Integración de Ecosistemas Frappe/ERPNext.
+* **Backend:** FastAPI, Django, Flask, Spring Boot, Laravel, Node.js.
 * **Frontend:** React, React Native (iOS/Android), Flutter, Vue.js, Svelte, Angular, TailwindCSS, OneCss, DaisyUI.
 * **Bases de Datos & Caching:** MySQL, PostgreSQL, Oracle, MongoDB, Redis, MariaDB.
 * **Middleware & Mensajería:** Kafka, RabbitMQ, Microsoft OLE.
-* **Integración de Ecosistemas ERP:** SAP, Oracle Business One, Microsoft Dynamics, Frappe/ERPNext.
+* **Integración de Ecosistemas ERP:** SAP, Oracle Business One, Microsoft Dynamics.
 * **Infraestructura & DevOps:** AWS (Lambda, EKS, Bedrock, Connect, API Gateway), Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, Ansible, JFrog, Nexus.
 * **Calidad & Pruebas:** SonarQube, Mockito, JMeter, TDD.
 * **Observabilidad:** Prometheus, Grafana, Splunk (Custom Dashboards JS/HTML/CSS).

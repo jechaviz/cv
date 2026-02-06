@@ -23,11 +23,11 @@
 
   <style>
     :root {
-      /* Brand Palette - Elite Sky */
+      /* Palette - Elite Sky */
       --theme-color: #0ea5e9;
       --accent-color: #38bdf8;
-      --bg-light: #ffffff;
       --bg-dark: #020617;
+      --sidebar-width: 300px;
 
       /* Typography */
       --base-font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -35,140 +35,154 @@
       --base-font-size: 16px;
       --base-line-height: 1.8;
 
-      /* Sidebar */
-      --sidebar-width: 320px;
-      --sidebar-background: #ffffff;
-      --sidebar-nav-link-color: #64748b;
-      --sidebar-nav-link-color--active: var(--theme-color);
-      --sidebar-nav-link-font-weight--active: 700;
-      --sidebar-nav-link-padding: 0.8rem 1.5rem;
-
-      /* Content */
-      --content-max-width: 65em;
-      --heading-h1-color: var(--theme-color);
-      --heading-h2-color: #0f172a;
-      --heading-h3-color: #334155;
-
-      /* Advanced Glass */
-      --glass-bg: rgba(255, 255, 255, 0.85);
-      --glass-border: rgba(0, 0, 0, 0.05);
-      --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
-    }
-
-    /* DARK MODE - ELITE DARK AESTHETIC - Explicit support for multiple selectors */
-    [data-theme='dark'],
-    body.dark,
-    html.dark {
+      /* Colors per Theme - Defaulting to Dark Elite */
       --sidebar-background: #020617;
       --sidebar-nav-link-color: #94a3b8;
       --heading-h1-color: #38bdf8;
-      --heading-h2-color: #f1f5f9;
-      --heading-h3-color: #cbd5e0;
-      --glass-bg: rgba(15, 23, 42, 0.9);
+      --heading-h2-color: #38bdf8;
+      --heading-h3-color: #7dd3fc;
+      --strong-color: #38bdf8;
+      --glass-bg: rgba(15, 23, 42, 0.4);
       --glass-border: rgba(255, 255, 255, 0.08);
-      --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
-      --theme-color: #38bdf8;
+      --text-main: #cbd5e0;
+
+      /* Layout Refinements */
+      --content-max-width: 65em;
+      --markdown-section-padding: 0px 15px 40px;
+      --content-margin: 0 auto;
+    }
+
+    /* Light Theme Overwrites */
+    body.light,
+    [data-theme='light'] {
+      --sidebar-background: #ffffff;
+      --sidebar-nav-link-color: #64748b;
+      --heading-h1-color: #0ea5e9;
+      --heading-h2-color: #0284c7;
+      --heading-h3-color: #0369a1;
+      --strong-color: #0ea5e9;
+      --glass-bg: rgba(255, 255, 255, 0.5);
+      --glass-border: rgba(0, 0, 0, 0.05);
+      --text-main: #334155;
+      --bg-dark: #ffffff;
     }
 
     body {
       font-family: var(--base-font-family);
-      background: var(--bg-light) !important;
-      color: #334155;
+      background-color: var(--bg-dark) !important;
+      color: var(--text-main);
       transition: all 0.4s ease;
+      margin: 0;
     }
 
-    [data-theme='dark'] body,
-    body.dark,
-    html.dark body {
-      background: var(--bg-dark) !important;
-      color: #cbd5e0;
-      /* Subtle Animated Mesh */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
       background-image:
         radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
-        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 40%),
-        radial-gradient(at 50% 50%, rgba(15, 23, 42, 1) 0px, transparent 100%) !important;
+        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 40%);
+      pointer-events: none;
     }
 
-    /* Sidebar - Ultra Clean */
     .sidebar {
       border-right: 1px solid var(--glass-border) !important;
-      backdrop-filter: blur(25px);
-      background: var(--glass-bg) !important;
-      transition: all 0.3s ease;
-    }
-
-    .sidebar-nav li>a {
-      transition: all 0.2s ease;
-      border-right: 4px solid transparent;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      background: var(--sidebar-background) !important;
     }
 
     .sidebar-nav li.active>a {
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, transparent 100%) !important;
-      border-right-color: var(--theme-color) !important;
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, transparent 100%) !important;
+      border-right: 4px solid var(--theme-color) !important;
       color: var(--theme-color) !important;
       font-weight: 800 !important;
     }
 
-    /* Markdown Headers - Awwwards Impact */
+    /* Content Area & Headers */
+    #main {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .markdown-section {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+
     .markdown-section h1 {
       font-family: var(--heading-font-family);
       font-weight: 900;
       font-size: 3.5rem;
       letter-spacing: -0.06rem;
-      margin-top: 2rem;
+      margin-top: 0 !important;
+      padding-top: 10px !important;
       margin-bottom: 2rem;
-      line-height: 1.1;
-      background: linear-gradient(to right, var(--theme-color), #818cf8);
+      background: linear-gradient(135deg, var(--theme-color), #818cf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Dark mode heading flourishes */
-    [data-theme='dark'] .markdown-section h1,
-    body.dark .markdown-section h1 {
-      text-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
-    }
-
+    /* Persistent Underlines with Hover Color Shift */
     .markdown-section h2 {
       font-family: var(--heading-font-family);
       font-weight: 800;
       font-size: 1.8rem;
-      margin-top: 3rem;
-      color: var(--heading-h2-color);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      color: var(--heading-h2-color) !important;
+      margin-top: 2.5rem;
+      padding-bottom: 5px;
+      border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+      /* Persistent subtle underline */
+      transition: border-color 0.3s ease, color 0.3s ease;
+      cursor: default;
+      width: fit-content;
+      max-width: 100%;
     }
 
-    .markdown-section h2::after {
-      content: '';
-      height: 1px;
-      flex-grow: 1;
-      background: linear-gradient(90deg, var(--glass-border), transparent);
+    .markdown-section h2:hover {
+      border-bottom-color: var(--theme-color);
+      /* Highlight color on hover */
+      color: var(--accent-color) !important;
     }
 
     .markdown-section h3 {
       font-family: var(--heading-font-family);
       font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--theme-color);
-      margin-top: 2rem;
+      font-size: 1.4rem;
+      color: var(--heading-h3-color) !important;
+      margin-top: 1.5rem;
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.2);
+      /* Persistent subtle underline */
+      transition: border-color 0.3s ease, color 0.3s ease;
+      width: fit-content;
+      max-width: 100%;
     }
 
-    /* Blockquote / Recuadro - Padding refinement */
+    .markdown-section h3:hover {
+      border-bottom-color: var(--heading-h3-color);
+    }
+
+    .markdown-section strong {
+      color: var(--strong-color) !important;
+    }
+
     .markdown-section blockquote {
-      background: var(--glass-bg);
-      border-left: 6px solid var(--theme-color);
-      border-radius: 0 16px 16px 0;
-      padding: 1.2rem 2rem;
-      margin: 2rem 0;
-      box-shadow: var(--shadow-premium);
-      backdrop-filter: blur(10px);
-      color: var(--heading-h3-color);
-      font-size: 1.1rem;
+      background: rgba(56, 189, 248, 0.03) !important;
+      border-left: 4px solid var(--theme-color) !important;
+      padding: 1rem 1.5rem !important;
+      margin: 1.5rem 0 !important;
     }
 
-    /* Floating Navigation Controls */
+    /* Bug fix: Duplicate icon prevention */
+    #docsify-darklight-theme:not(.integrated) {
+      display: none !important;
+    }
+
     .settings-bar {
       position: fixed;
       top: 25px;
@@ -176,58 +190,39 @@
       z-index: 1000;
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
       background: var(--glass-bg);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       padding: 8px 18px;
-      border-radius: 40px;
+      border-radius: 50px;
       border: 1px solid var(--glass-border);
-      box-shadow: var(--shadow-premium);
-      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .settings-bar:hover {
-      transform: scale(1.05) translateY(-3px);
-      border-color: var(--theme-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     #lang-toggle {
       background: transparent;
-      color: var(--heading-h2-color);
+      color: var(--heading-h1-color);
       border: none;
       font-weight: 900;
       cursor: pointer;
       font-family: var(--heading-font-family);
       font-size: 14px;
-      letter-spacing: 0.1em;
-      transition: 0.3s;
-    }
-
-    #lang-toggle:hover {
-      color: var(--theme-color);
+      text-transform: uppercase;
     }
 
     #docsify-darklight-theme.integrated {
       position: static !important;
       margin: 0 !important;
-      width: 24px !important;
-      height: 24px !important;
+      width: 22px !important;
+      height: 22px !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Dark Mode specific icon color if needed */
-    [data-theme='dark'] #lang-toggle,
-    body.dark #lang-toggle {
-      color: var(--heading-h2-color);
-    }
-
-    /* Scrollbar */
     ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-dark);
+      width: 5px;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -235,30 +230,9 @@
       border-radius: 10px;
     }
 
-    /* Animations */
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .markdown-section {
-      animation: slideUp 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
     @media (max-width: 768px) {
       .markdown-section h1 {
         font-size: 2.5rem;
-      }
-
-      .sidebar {
-        width: 280px;
       }
 
       .settings-bar {
@@ -269,13 +243,16 @@
   </style>
 
   <script>
+    if (!window.localStorage.getItem('docsify-darklight-theme')) {
+      window.localStorage.setItem('docsify-darklight-theme', 'dark');
+    }
     if (!window.location.hash || window.location.hash === '#/') {
       window.location.hash = '#/es/';
     }
   </script>
 </head>
 
-<body>
+<body class="dark">
   <div class="settings-bar">
     <button id="lang-toggle">EN</button>
   </div>
@@ -283,28 +260,23 @@
 
   <script>
     window.$docsify = {
-      name: '<span style="font-family:Outfit; font-weight:900; letter-spacing:-1.5px; font-size: 1.4rem;">JESÚS CHÁVEZ</span>',
+      name: '<span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8;">JESÚS CHÁVEZ</span>',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-
       fallbackLanguages: ['es', 'en'],
-
       namespaces: [{ id: 'lang', values: ['es', 'en'], optional: false }],
-
       alias: {
         '/(es|en)/.+/_sidebar.md': '/$1/_sidebar.md',
         '/en/(.*)': '/en/$1',
         '/es/(.*)': '/es/$1',
         '^/(?!en|es)(.*)': '/es/$1'
       },
-
       themeable: {
         readyTransition: true,
         responsiveTables: true
       },
-
       darklightTheme: {
         siteFont: "Inter, sans-serif",
         defaultTheme: 'dark',

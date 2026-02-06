@@ -6,7 +6,7 @@
 * Microservicios y Arquitectura Hexagonal
 
 ### Lenguajes y Frameworks
-* **Python (Expert/Senior):** High performance AsyncIO, Pydantic v2, FastAPI, Django, Flask. **Frappe Framework / ERPNext**.
+* **Python (Expert/Senior):** High performance AsyncIO, Pydantic v2, FastAPI, Django, Flask.
 * **Algotrading (Advanced):** Nautilus Trading (+ Custom framework in python), **MQL5** (MetaTrader 5), **aiomql**, PineScript. Performance optimization for trading bots and binary trading AI.
 * **Java (Senior):** Java 11, Spring Boot, Webflux, AOP, DDD.
 * **PHP (Senior):** Laravel, Composer, integration with UI frameworks (Kompo).
