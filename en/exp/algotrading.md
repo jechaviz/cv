@@ -6,7 +6,7 @@
 Quantitative Trading focused on algorithmic innovation, the design, development, and optimization of algorithmic trading systems for financial markets
 
 ### Purpose of the Position
-Professionalizing trading strategies through e2e automation and advanced mathematical modeling, ensuring **equity trading** governance, signal engine modularization, and rigorous parameter optimization.
+Develop profitable, self-improving trading systems with measurable behavior by design, ensuring **equity trading** governance, signal engine modularization, and automated parameter optimization.
 
 ### Cross-cutting Responsibilities
 * **Multilogic Architecture:** Design of decoupled systems based on **interfaces and implementations** to handle various market logics simultaneously.
@@ -26,7 +26,7 @@ Professionalizing trading strategies through e2e automation and advanced mathema
 ### RELEVANT PROJECTS
 
 #### Project 1: Optimization and Prediction Framework
-**Objective:** Develop a trading ecosystem that uses mathematical analysis to predict movements and optimize results through stochastic processes.
+**Objective:** Develop a trading framework that uses mathematical analysis to predict movements and optimize results through stochastic processes.
 **Achievements:** Stabilization of the equity curve through the implementation of volatility filters and continuous optimization with **Optuna**.
 **Technologies:** `Python` · `Optuna` · `SciPy` · `Scikit-learn` · `Nautilus Trading`
 

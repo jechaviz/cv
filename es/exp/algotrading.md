@@ -6,7 +6,7 @@
 Trading Cuantitativo centrado en la innovacion algoritmica, el diseño, desarrollo y optimización de sistemas de trading algorítmico para mercados financieros
 
 ### Propósito del puesto
-Profesionalizar estrategias de trading mediante la automatización e2e y el modelado matemático avanzado, garantizando la gobernanza del **equity trading**, la modularización de motores de señales y la optimización rigurosa de parámetros.
+Desarrollar sistemas de trading rentables, auto mejorables y de comportamiento medible por diseño, garantizando la gobernanza del **equity trading**, la modularización de motores de señales y la optimización automatizada de parámetros.
 
 ### Responsabilidades transversales del puesto
 * **Arquitectura Multilógica:** Diseño de sistemas desacoplados basados en **interfaces e implementaciones** para el manejo de diversas lógicas de mercado de forma simultánea.
@@ -26,7 +26,7 @@ Profesionalizar estrategias de trading mediante la automatización e2e y el mode
 ### PROYECTOS RELEVANTES
 
 #### Proyecto 1: Framework de Optimización y Predicción
-**Objetivo:** Desarrollar un ecosistema de trading que utilice análisis matemático para predecir movimientos y optimizar resultados mediante procesos estocásticos.
+**Objetivo:** Desarrollar un framework de trading que utilice análisis matemático para predecir movimientos y optimizar resultados mediante procesos estocásticos.
 **Logros:** Estabilización de la curva de equity mediante la implementación de filtros de volatilidad y optimización continua con **Optuna**.
 **Tecnologías:** `Python` · `Optuna` · `SciPy` · `Scikit-learn` · `Nautilus Trading`
 
