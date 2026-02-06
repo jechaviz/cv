@@ -42,7 +42,7 @@
 ---
 
 ### ALGO-TRADING AND AUTOMATION
-* **Experience:** Development of more than 30 commercial trading robots for global clients (Switzerland, Canada, Mexico).
+* **Experience:** Development of 3 trading robots for individual customers and more than 30 industrial proprietary models for global clients (Switzerland, Canada, Mexico).
 * **Stack:** Java/Python, MetaTrader 5 (MQL5), PineScript.
 
 ---
