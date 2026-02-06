@@ -23,10 +23,9 @@
 
   <style>
     :root {
-      /* Palette - Elite Sky */
+      /* Palette - Global Branding */
       --theme-color: #0ea5e9;
       --accent-color: #38bdf8;
-      --bg-dark: #020617;
       --sidebar-width: 300px;
 
       /* Typography */
@@ -35,7 +34,8 @@
       --base-font-size: 16px;
       --base-line-height: 1.8;
 
-      /* Colors per Theme - Defaulting to Dark Elite */
+      /* Default (Dark Mode Variables) */
+      --bg-base: #020617;
       --sidebar-background: #020617;
       --sidebar-nav-link-color: #94a3b8;
       --heading-h1-color: #38bdf8;
@@ -46,15 +46,16 @@
       --glass-border: rgba(255, 255, 255, 0.08);
       --text-main: #cbd5e0;
 
-      /* Layout Refinements */
+      /* Layout Defaults */
       --content-max-width: 65em;
       --markdown-section-padding: 0px 15px 40px;
-      --content-margin: 0 auto;
     }
 
-    /* Light Theme Overwrites */
+    /* LIGHT THEME OVERRIDES - Support both class-based and attribute-based toggling */
     body.light,
-    [data-theme='light'] {
+    [data-theme='light'],
+    .light body {
+      --bg-base: #ffffff;
       --sidebar-background: #ffffff;
       --sidebar-nav-link-color: #64748b;
       --heading-h1-color: #0ea5e9;
@@ -64,17 +65,17 @@
       --glass-bg: rgba(255, 255, 255, 0.5);
       --glass-border: rgba(0, 0, 0, 0.05);
       --text-main: #334155;
-      --bg-dark: #ffffff;
     }
 
     body {
       font-family: var(--base-font-family);
-      background-color: var(--bg-dark) !important;
+      background-color: var(--bg-base);
       color: var(--text-main);
-      transition: all 0.4s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
       margin: 0;
     }
 
+    /* Subtle Mesh Gradient Overlay */
     body::before {
       content: "";
       position: fixed;
@@ -83,10 +84,17 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+      opacity: 0.15;
       background-image:
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
-        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 40%);
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.4) 0px, transparent 50%);
       pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Fade out mesh in light mode for a cleaner look */
+    body.light::before {
+      opacity: 0.03;
     }
 
     .sidebar {
@@ -125,9 +133,10 @@
       background: linear-gradient(135deg, var(--theme-color), #818cf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    /* Persistent Underlines with Hover Color Shift */
+    /* Persistent Underlines */
     .markdown-section h2 {
       font-family: var(--heading-font-family);
       font-weight: 800;
@@ -136,16 +145,13 @@
       margin-top: 2.5rem;
       padding-bottom: 5px;
       border-bottom: 2px solid rgba(56, 189, 248, 0.2);
-      /* Persistent subtle underline */
       transition: border-color 0.3s ease, color 0.3s ease;
-      cursor: default;
       width: fit-content;
       max-width: 100%;
     }
 
     .markdown-section h2:hover {
       border-bottom-color: var(--theme-color);
-      /* Highlight color on hover */
       color: var(--accent-color) !important;
     }
 
@@ -157,14 +163,7 @@
       margin-top: 1.5rem;
       padding-bottom: 3px;
       border-bottom: 1px solid rgba(125, 211, 252, 0.2);
-      /* Persistent subtle underline */
-      transition: border-color 0.3s ease, color 0.3s ease;
       width: fit-content;
-      max-width: 100%;
-    }
-
-    .markdown-section h3:hover {
-      border-bottom-color: var(--heading-h3-color);
     }
 
     .markdown-section strong {
@@ -178,7 +177,7 @@
       margin: 1.5rem 0 !important;
     }
 
-    /* Bug fix: Duplicate icon prevention */
+    /* Settings Bar & Bug Fixes */
     #docsify-darklight-theme:not(.integrated) {
       display: none !important;
     }
@@ -243,16 +242,21 @@
   </style>
 
   <script>
-    if (!window.localStorage.getItem('docsify-darklight-theme')) {
-      window.localStorage.setItem('docsify-darklight-theme', 'dark');
-    }
+    // Robust Initialization
+    (function () {
+      const savedTheme = window.localStorage.getItem('docsify-darklight-theme') || 'dark';
+      document.body = document.body || document.createElement('body');
+      document.body.classList.add(savedTheme);
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+
     if (!window.location.hash || window.location.hash === '#/') {
       window.location.hash = '#/es/';
     }
   </script>
 </head>
 
-<body class="dark">
+<body>
   <div class="settings-bar">
     <button id="lang-toggle">EN</button>
   </div>
@@ -329,8 +333,9 @@
 
       updateLangButton();
       moveThemeButton();
-      setTimeout(moveThemeButton, 500);
-      setTimeout(moveThemeButton, 1500);
+      // Polling to ensure plugin button is moved when injected
+      const pollTimer = setInterval(moveThemeButton, 500);
+      setTimeout(() => clearInterval(pollTimer), 5000);
     });
   </script>
 </body>
