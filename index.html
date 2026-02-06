@@ -16,39 +16,75 @@
 
   <style>
     :root {
-      /* Palette & Brand */
-      --theme-color: #007aff;
+      /* Palette & Brand - Premium AI Blue */
+      --theme-color: #0087ff;
 
       /* Docsify Themable: Premium Customization */
       --base-font-family: "Outfit", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
       --base-font-size: 16px;
-      --base-line-height: 1.6;
+      --base-line-height: 1.7;
 
-      --sidebar-width: 280px;
-      --sidebar-background: #fdfdfd;
+      --sidebar-width: 300px;
+      --sidebar-background: #ffffff;
       --sidebar-nav-link-color: #4a5568;
       --sidebar-nav-link-color--active: var(--theme-color);
       --sidebar-nav-link-font-weight--active: 700;
-      --sidebar-nav-link-padding: 0.5rem 1rem;
-      --sidebar-nav-pagelink-padding: 0.5rem 1rem;
+      --sidebar-nav-link-padding: 0.6rem 1.2rem;
 
       --content-max-width: 65em;
-      --heading-color: #2d3748;
+
+      /* Header Colors - Vibrant & Professional */
+      --heading-h1-color: var(--theme-color);
+      --heading-h2-color: #1a365d;
+      --heading-h3-color: #2b6cb0;
+      --heading-h1-font-weight: 800;
+      --heading-h2-font-weight: 700;
+
       --anchor-color: var(--theme-color);
+      --anchor-text-decoration: none;
+      --anchor-text-decoration--hover: underline;
+
+      /* Blockquote & Code */
+      --blockquote-background: #f0f7ff;
+      --blockquote-border-color: var(--theme-color);
+      --blockquote-color: #2d3748;
+      --code-theme-background: #f8f9fa;
 
       /* Settings Bar (High-End Glassmorphism) */
-      --settings-bar-bg: rgba(255, 255, 255, 0.7);
-      --settings-bar-border: rgba(0, 0, 0, 0.1);
-      --settings-bar-blur: 12px;
+      --settings-bar-bg: rgba(255, 255, 255, 0.85);
+      --settings-bar-border: rgba(0, 0, 0, 0.08);
+      --settings-bar-blur: 15px;
     }
 
-    /* Dark Mode Overrides for Themable Variables */
+    /* Dark Mode Overrides */
     [data-theme='dark'] {
-      --sidebar-background: #091a28;
+      --sidebar-background: #0b1521;
       --sidebar-nav-link-color: #a0aec0;
-      --heading-color: #edf2f7;
-      --settings-bar-bg: rgba(9, 26, 40, 0.7);
+      --heading-h1-color: #63b3ed;
+      --heading-h2-color: #90cdf4;
+      --heading-h3-color: #a3bffa;
+      --blockquote-background: rgba(0, 135, 255, 0.1);
+      --blockquote-color: #e2e8f0;
+      --code-theme-background: #1a2634;
+      --settings-bar-bg: rgba(11, 21, 33, 0.85);
       --settings-bar-border: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Professional UI Flourishes */
+    .markdown-section h1 {
+      border-left: 5px solid var(--theme-color);
+      padding-left: 15px;
+      margin-top: 2rem;
+    }
+
+    .markdown-section h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 8px;
+      margin-top: 1.5rem;
+    }
+
+    [data-theme='dark'] .markdown-section h2 {
+      border-bottom-color: rgba(255, 255, 255, 0.05);
     }
 
     /* Barra de controles superior */
@@ -110,7 +146,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     if (!window.location.hash || window.location.hash === '#/') {
@@ -164,12 +200,12 @@
         codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
         bodyFontSize: '16px',
         dark: {
-          accent: '#007aff',
+          accent: '#0087ff',
           background: '#091a28',
           textColor: '#b0b1b2',
         },
         light: {
-          accent: '#007aff',
+          accent: '#0087ff',
           background: '#ffffff',
           textColor: '#34495e',
         }
@@ -184,7 +220,6 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
   <script>
-    // Integración profesional del botón de tema y selector de idioma
     window.addEventListener('load', function () {
       const settingsBar = document.querySelector('.settings-bar');
       const langToggle = document.getElementById('lang-toggle');
