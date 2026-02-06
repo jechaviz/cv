@@ -3,7 +3,7 @@
 **2019 – Present**
 
 ### Context
-Highly specialized technical activity focused on the design, development, and optimization of algorithmic trading systems, high-frequency bots, and advanced indicators for global financial markets.
+Quantitative Trading focused on algorithmic innovation, the design, development, and optimization of algorithmic trading systems for financial markets
 
 ### Purpose of the Position
 Professionalizing trading strategies through e2e automation and advanced mathematical modeling, ensuring **equity trading** governance, signal engine modularization, and rigorous parameter optimization.

@@ -3,7 +3,7 @@
 **2019 – Presente**
 
 ### Contexto
-Actividad de alta especialización técnica centrada en el diseño, desarrollo y optimización de sistemas de trading algorítmico, bots de alta frecuencia e indicadores avanzados para mercados financieros globales.
+Trading Cuantitativo centrado en la innovacion algoritmica, el diseño, desarrollo y optimización de sistemas de trading algorítmico para mercados financieros
 
 ### Propósito del puesto
 Profesionalizar estrategias de trading mediante la automatización e2e y el modelado matemático avanzado, garantizando la gobernanza del **equity trading**, la modularización de motores de señales y la optimización rigurosa de parámetros.
