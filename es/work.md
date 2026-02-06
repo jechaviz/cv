@@ -67,7 +67,7 @@ Requiero mi curriculum en docsify con lo siguiente (solo se muestra una parte co
 > **Email:** jesus.cgalaviz@gmail.com  
 > **Teléfono:** +52 4421896413
 
-Bienvenido a mi portafolio profesional y CV interactivo. Aquí encontrarás el desglose de mi trayectoria de más de 13 años liderando equipos técnicos y diseñando arquitecturas complejas, con un enfoque especial en **Python**, **Java** y **Arquitectura de Nube**.
+CV. Aquí encontrarás el desglose de mi trayectoria de más de 13 años liderando equipos técnicos y diseñando arquitecturas complejas, con un enfoque especial en **Python**, **Java** y **Arquitectura de Nube**.
 
 Este sitio sigue la estructura de desarrollo profesional detallada para facilitar la revisión de proyectos específicos.
 
