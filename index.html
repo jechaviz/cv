@@ -117,8 +117,8 @@
 
     .sidebar>h1 a {
       display: block;
-      padding: 5px 0 10px 0 !important;
-      /* Minimized top space */
+      padding: 0 0 10px 0 !important;
+      /* Absolute top start */
       background: var(--sidebar-background) !important;
       text-decoration: none;
       color: inherit;
@@ -313,17 +313,15 @@
 
   <script>
     window.$docsify = {
-      name: `
-        <div style="text-align: center;">
-          <span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8; font-size: 1.3rem; display: block; margin-bottom: 8px;">JESÚS CHÁVEZ</span>
+      name: `<div style="text-align: center; padding-top: 0; margin-top: 0;">
+          <span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8; font-size: 1.3rem; display: block; margin-bottom: 5px; padding-top: 10px;">JESÚS CHÁVEZ</span>
           <div class="contact-card" style="text-align: left;">
             <div class="contact-item"><span>✉</span> jesus.cgalaviz@gmail.com</div>
             <div class="contact-item"><span>✆</span> +52 4421896413</div>
             <div class="contact-item"><span></span> github.com/jechaviz</div>
             <div class="contact-item"><span>📍</span> Querétaro, México</div>
           </div>
-        </div>
-      `,
+        </div>`,
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
