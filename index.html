@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CV Jesús Chávez - Arquitecto de Software</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="CV Profesional">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Docsify v4 Themable Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    title="docsify-darklight-theme" type="text/css">
+
+  <style>
+    :root {
+      /* Palette & Brand */
+      --theme-color: #007aff;
+
+      /* Docsify Themable: Premium Customization */
+      --base-font-family: "Outfit", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+      --base-font-size: 16px;
+      --base-line-height: 1.6;
+
+      --sidebar-width: 280px;
+      --sidebar-background: #fdfdfd;
+      --sidebar-nav-link-color: #4a5568;
+      --sidebar-nav-link-color--active: var(--theme-color);
+      --sidebar-nav-link-font-weight--active: 700;
+      --sidebar-nav-link-padding: 0.5rem 1rem;
+      --sidebar-nav-pagelink-padding: 0.5rem 1rem;
+
+      --content-max-width: 65em;
+      --heading-color: #2d3748;
+      --anchor-color: var(--theme-color);
+
+      /* Settings Bar (High-End Glassmorphism) */
+      --settings-bar-bg: rgba(255, 255, 255, 0.7);
+      --settings-bar-border: rgba(0, 0, 0, 0.1);
+      --settings-bar-blur: 12px;
+    }
+
+    /* Dark Mode Overrides for Themable Variables */
+    [data-theme='dark'] {
+      --sidebar-background: #091a28;
+      --sidebar-nav-link-color: #a0aec0;
+      --heading-color: #edf2f7;
+      --settings-bar-bg: rgba(9, 26, 40, 0.7);
+      --settings-bar-border: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Barra de controles superior */
+    .settings-bar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: var(--settings-bar-bg);
+      backdrop-filter: blur(var(--settings-bar-blur));
+      padding: 6px 16px;
+      border-radius: 25px;
+      border: 1px solid var(--settings-bar-border);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #lang-toggle {
+      background: transparent;
+      color: inherit;
+      border: none;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      padding: 2px 4px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    #lang-toggle:hover {
+      color: var(--theme-color);
+    }
+
+    #docsify-darklight-theme:not(.integrated) {
+      display: none !important;
+    }
+
+    #docsify-darklight-theme.integrated {
+      position: static !important;
+      margin: 0 !important;
+      width: 22px !important;
+      height: 22px !important;
+      cursor: pointer;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    #docsify-darklight-theme.integrated:hover {
+      transform: rotate(30deg);
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    if (!window.location.hash || window.location.hash === '#/') {
+      window.location.hash = '#/es/';
+    }
+  </script>
+</head>
+
+<body>
+  <div class="settings-bar">
+    <button id="lang-toggle">EN</button>
+  </div>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'Jesús Chávez Galaviz',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+
+      // Multi-Language Strategy
+      fallbackLanguages: ['es', 'en'],
+
+      namespaces: [
+        {
+          id: 'lang',
+          values: ['es', 'en'],
+          optional: false
+        }
+      ],
+
+      alias: {
+        '/(es|en)/.+/_sidebar.md': '/$1/_sidebar.md',
+        '/en/(.*)': '/en/$1',
+        '/es/(.*)': '/es/$1',
+        '^/(?!en|es)(.*)': '/es/$1'
+      },
+
+      // Themable Config
+      themeable: {
+        readyTransition: true,
+        responsiveTables: true
+      },
+
+      // DarkLight Theme Config
+      darklightTheme: {
+        siteFont: "Outfit, Source Sans Pro, Helvetica Neue, Arial, sans-serif",
+        defaultTheme: 'dark',
+        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize: '16px',
+        dark: {
+          accent: '#007aff',
+          background: '#091a28',
+          textColor: '#b0b1b2',
+        },
+        light: {
+          accent: '#007aff',
+          background: '#ffffff',
+          textColor: '#34495e',
+        }
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themable@0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-namespaced@latest/dist/docsify-namespaced.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <script>
+    // Integración profesional del botón de tema y selector de idioma
+    window.addEventListener('load', function () {
+      const settingsBar = document.querySelector('.settings-bar');
+      const langToggle = document.getElementById('lang-toggle');
+
+      const updateLangButton = () => {
+        const isEn = window.location.hash.includes('/en/');
+        langToggle.innerText = isEn ? 'ES' : 'EN';
+      };
+
+      langToggle.addEventListener('click', () => {
+        let hash = window.location.hash;
+        let newHash;
+        if (hash.includes('/es/')) {
+          newHash = hash.replace('/es/', '/en/');
+        } else if (hash.includes('/en/')) {
+          newHash = hash.replace('/en/', '/es/');
+        } else {
+          newHash = '#/en/';
+        }
+
+        window.location.hash = newHash;
+        window.location.reload();
+      });
+
+      const moveThemeButton = () => {
+        const themeBtn = document.getElementById('docsify-darklight-theme');
+        if (themeBtn && settingsBar && !themeBtn.classList.contains('integrated')) {
+          themeBtn.classList.add('integrated');
+          settingsBar.appendChild(themeBtn);
+        }
+      };
+
+      updateLangButton();
+      moveThemeButton();
+      setTimeout(moveThemeButton, 500);
+      setTimeout(moveThemeButton, 1500);
+    });
+  </script>
+</body>
+
+</html>
