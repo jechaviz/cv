@@ -51,10 +51,10 @@
       --markdown-section-padding: 0px 15px 40px;
     }
 
-    /* LIGHT THEME OVERRIDES - Support both class-based and attribute-based toggling */
+    /* Support for both .light body and data-theme approach */
+    .light body,
     body.light,
-    [data-theme='light'],
-    .light body {
+    [data-theme='light'] {
       --bg-base: #ffffff;
       --sidebar-background: #ffffff;
       --sidebar-nav-link-color: #64748b;
@@ -75,7 +75,7 @@
       margin: 0;
     }
 
-    /* Subtle Mesh Gradient Overlay */
+    /* Mesh Gradient - Always present but subtle */
     body::before {
       content: "";
       position: fixed;
@@ -92,7 +92,6 @@
       transition: opacity 0.5s ease;
     }
 
-    /* Fade out mesh in light mode for a cleaner look */
     body.light::before {
       opacity: 0.03;
     }
@@ -136,7 +135,6 @@
       background-clip: text;
     }
 
-    /* Persistent Underlines */
     .markdown-section h2 {
       font-family: var(--heading-font-family);
       font-weight: 800;
@@ -177,7 +175,7 @@
       margin: 1.5rem 0 !important;
     }
 
-    /* Settings Bar & Bug Fixes */
+    /* Duplicate icon prevention */
     #docsify-darklight-theme:not(.integrated) {
       display: none !important;
     }
@@ -220,15 +218,6 @@
       justify-content: center;
     }
 
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--theme-color);
-      border-radius: 10px;
-    }
-
     @media (max-width: 768px) {
       .markdown-section h1 {
         font-size: 2.5rem;
@@ -242,14 +231,14 @@
   </style>
 
   <script>
-    // Robust Initialization
+    // Theme helper
     (function () {
       const savedTheme = window.localStorage.getItem('docsify-darklight-theme') || 'dark';
-      document.body = document.body || document.createElement('body');
-      document.body.classList.add(savedTheme);
+      document.documentElement.className = savedTheme;
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
 
+    // Route helper
     if (!window.location.hash || window.location.hash === '#/') {
       window.location.hash = '#/es/';
     }
@@ -260,7 +249,7 @@
   <div class="settings-bar">
     <button id="lang-toggle">EN</button>
   </div>
-  <div id="app"></div>
+  <div id="app">Cargando experiencia elite...</div>
 
   <script>
     window.$docsify = {
@@ -286,16 +275,8 @@
         defaultTheme: 'dark',
         codeFontFamily: 'Roboto Mono, monospace',
         bodyFontSize: '16px',
-        dark: {
-          accent: '#38bdf8',
-          background: '#020617',
-          textColor: '#cbd5e0',
-        },
-        light: {
-          accent: '#0ea5e9',
-          background: '#ffffff',
-          textColor: '#334155',
-        }
+        dark: { accent: '#38bdf8', background: '#020617', textColor: '#cbd5e0' },
+        light: { accent: '#0ea5e9', background: '#ffffff', textColor: '#334155' }
       }
     }
   </script>
@@ -333,7 +314,6 @@
 
       updateLangButton();
       moveThemeButton();
-      // Polling to ensure plugin button is moved when injected
       const pollTimer = setInterval(moveThemeButton, 500);
       setTimeout(() => clearInterval(pollTimer), 5000);
     });
