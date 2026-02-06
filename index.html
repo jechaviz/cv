@@ -175,6 +175,39 @@
       margin: 1.5rem 0 !important;
     }
 
+    /* Contact Card in Sidebar */
+    .contact-card {
+      margin: 15px 20px 25px 20px;
+      padding: 12px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      font-size: 11px;
+      line-height: 1.6;
+      color: var(--sidebar-nav-link-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .contact-item span {
+      font-weight: 600;
+      color: var(--theme-color);
+      width: 14px;
+      text-align: center;
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
     /* Duplicate icon prevention */
     #docsify-darklight-theme:not(.integrated) {
       display: none !important;
@@ -253,7 +286,17 @@
 
   <script>
     window.$docsify = {
-      name: '<span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8;">JESÚS CHÁVEZ</span>',
+      name: `
+        <div style="text-align: center;">
+          <span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8; font-size: 1.4rem; display: block; margin-bottom: 10px;">JESÚS CHÁVEZ</span>
+          <div class="contact-card" style="text-align: left;">
+            <a href="mailto:jesus.cgalaviz@gmail.com" class="contact-item"><span>✉</span> jesus.cgalaviz@gmail.com</a>
+            <a href="tel:+524421896413" class="contact-item"><span>✆</span> +52 4421896413</a>
+            <a href="https://github.com/jechaviz" target="_blank" class="contact-item"><span></span> github.com/jechaviz</a>
+            <div class="contact-item"><span>📍</span> Querétaro, México</div>
+          </div>
+        </div>
+      `,
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
