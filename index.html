@@ -23,11 +23,11 @@
 
   <style>
     :root {
-      /* Brand Palette */
-      --theme-color: #38bdf8;
-      --accent-color: #0ea5e9;
-      --bg-light: #f8fafc;
-      --bg-dark: #030712;
+      /* Brand Palette - Elite Sky */
+      --theme-color: #0ea5e9;
+      --accent-color: #38bdf8;
+      --bg-light: #ffffff;
+      --bg-dark: #020617;
 
       /* Typography */
       --base-font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -37,7 +37,7 @@
 
       /* Sidebar */
       --sidebar-width: 320px;
-      --sidebar-background: var(--bg-light);
+      --sidebar-background: #ffffff;
       --sidebar-nav-link-color: #64748b;
       --sidebar-nav-link-color--active: var(--theme-color);
       --sidebar-nav-link-font-weight--active: 700;
@@ -46,101 +46,129 @@
       /* Content */
       --content-max-width: 65em;
       --heading-h1-color: var(--theme-color);
-      --heading-h2-color: #1e293b;
+      --heading-h2-color: #0f172a;
       --heading-h3-color: #334155;
 
-      /* Effects */
-      --glass-bg: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.3);
-      --shadow-premium: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+      /* Advanced Glass */
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(0, 0, 0, 0.05);
+      --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
     }
 
-    /* Dark Mode - Awwwards Tier Aesthetic */
-    [data-theme='dark'] {
-      --sidebar-background: #030712;
+    /* DARK MODE - ELITE DARK AESTHETIC - Explicit support for multiple selectors */
+    [data-theme='dark'],
+    body.dark,
+    html.dark {
+      --sidebar-background: #020617;
       --sidebar-nav-link-color: #94a3b8;
       --heading-h1-color: #38bdf8;
       --heading-h2-color: #f1f5f9;
-      --heading-h3-color: #e2e8f0;
-      --glass-bg: rgba(15, 23, 42, 0.8);
-      --glass-border: rgba(255, 255, 255, 0.05);
-      --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+      --heading-h3-color: #cbd5e0;
+      --glass-bg: rgba(15, 23, 42, 0.9);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
+      --theme-color: #38bdf8;
     }
 
     body {
       font-family: var(--base-font-family);
-      background: var(--bg-light);
-      transition: background 0.5s ease;
+      background: var(--bg-light) !important;
+      color: #334155;
+      transition: all 0.4s ease;
     }
 
-    [data-theme='dark'] body {
-      background: var(--bg-dark);
+    [data-theme='dark'] body,
+    body.dark,
+    html.dark body {
+      background: var(--bg-dark) !important;
+      color: #cbd5e0;
+      /* Subtle Animated Mesh */
       background-image:
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.05) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 40%),
+        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 40%),
+        radial-gradient(at 50% 50%, rgba(15, 23, 42, 1) 0px, transparent 100%) !important;
     }
 
-    /* Professional Sidebar */
+    /* Sidebar - Ultra Clean */
     .sidebar {
       border-right: 1px solid var(--glass-border) !important;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(25px);
       background: var(--glass-bg) !important;
-    }
-
-    .sidebar-nav li.active>a {
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, transparent 100%) !important;
-      border-right: 4px solid var(--theme-color) !important;
       transition: all 0.3s ease;
     }
 
-    /* Premium Markdown Sections */
-    .markdown-section {
-      padding: 40px 15px;
+    .sidebar-nav li>a {
+      transition: all 0.2s ease;
+      border-right: 4px solid transparent;
     }
 
+    .sidebar-nav li.active>a {
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, transparent 100%) !important;
+      border-right-color: var(--theme-color) !important;
+      color: var(--theme-color) !important;
+      font-weight: 800 !important;
+    }
+
+    /* Markdown Headers - Awwwards Impact */
     .markdown-section h1 {
       font-family: var(--heading-font-family);
       font-weight: 900;
       font-size: 3.5rem;
-      letter-spacing: -0.05rem;
+      letter-spacing: -0.06rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
-      background: linear-gradient(135deg, var(--theme-color) 0%, #0ea5e9 100%);
+      line-height: 1.1;
+      background: linear-gradient(to right, var(--theme-color), #818cf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: fadeInDown 0.8s ease-out;
+    }
+
+    /* Dark mode heading flourishes */
+    [data-theme='dark'] .markdown-section h1,
+    body.dark .markdown-section h1 {
+      text-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
     }
 
     .markdown-section h2 {
       font-family: var(--heading-font-family);
       font-weight: 800;
       font-size: 1.8rem;
-      margin-top: 3.5rem;
+      margin-top: 3rem;
+      color: var(--heading-h2-color);
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 1rem;
     }
 
     .markdown-section h2::after {
       content: '';
-      flex: 1;
       height: 1px;
+      flex-grow: 1;
       background: linear-gradient(90deg, var(--glass-border), transparent);
     }
 
+    .markdown-section h3 {
+      font-family: var(--heading-font-family);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--theme-color);
+      margin-top: 2rem;
+    }
+
+    /* Blockquote / Recuadro - Padding refinement */
     .markdown-section blockquote {
       background: var(--glass-bg);
-      border-left: 5px solid var(--theme-color);
-      border-radius: 0 12px 12px 0;
-      padding: 1.5rem 2rem;
+      border-left: 6px solid var(--theme-color);
+      border-radius: 0 16px 16px 0;
+      padding: 1.2rem 2rem;
       margin: 2rem 0;
       box-shadow: var(--shadow-premium);
       backdrop-filter: blur(10px);
-      font-style: italic;
       color: var(--heading-h3-color);
+      font-size: 1.1rem;
     }
 
-    /* Floating Control Bar */
+    /* Floating Navigation Controls */
     .settings-bar {
       position: fixed;
       top: 25px;
@@ -150,17 +178,17 @@
       align-items: center;
       gap: 20px;
       background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
       padding: 8px 18px;
       border-radius: 40px;
       border: 1px solid var(--glass-border);
       box-shadow: var(--shadow-premium);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .settings-bar:hover {
-      transform: translateY(-2px) scale(1.02);
+      transform: scale(1.05) translateY(-3px);
       border-color: var(--theme-color);
     }
 
@@ -172,32 +200,30 @@
       cursor: pointer;
       font-family: var(--heading-font-family);
       font-size: 14px;
-      outline: none;
-      text-transform: uppercase;
       letter-spacing: 0.1em;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     #lang-toggle:hover {
       color: var(--theme-color);
-      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
     }
 
-    /* Theme Toggle Overwrites */
     #docsify-darklight-theme.integrated {
       position: static !important;
-      width: 28px !important;
-      height: 28px !important;
-      cursor: pointer;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.2));
+      margin: 0 !important;
+      width: 24px !important;
+      height: 24px !important;
     }
 
-    /* Custom Scrollbar */
+    /* Dark Mode specific icon color if needed */
+    [data-theme='dark'] #lang-toggle,
+    body.dark #lang-toggle {
+      color: var(--heading-h2-color);
+    }
+
+    /* Scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
 
     ::-webkit-scrollbar-track {
@@ -210,10 +236,10 @@
     }
 
     /* Animations */
-    @keyframes fadeInDown {
+    @keyframes slideUp {
       from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(30px);
       }
 
       to {
@@ -222,16 +248,22 @@
       }
     }
 
-    /* Responsive */
+    .markdown-section {
+      animation: slideUp 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
     @media (max-width: 768px) {
       .markdown-section h1 {
         font-size: 2.5rem;
       }
 
+      .sidebar {
+        width: 280px;
+      }
+
       .settings-bar {
         top: 15px;
         right: 15px;
-        padding: 6px 14px;
       }
     }
   </style>
@@ -251,7 +283,7 @@
 
   <script>
     window.$docsify = {
-      name: '<span style="font-family:Outfit; font-weight:900; letter-spacing:-1px;">Jesús Chávez</span>',
+      name: '<span style="font-family:Outfit; font-weight:900; letter-spacing:-1.5px; font-size: 1.4rem;">JESÚS CHÁVEZ</span>',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
@@ -259,13 +291,7 @@
 
       fallbackLanguages: ['es', 'en'],
 
-      namespaces: [
-        {
-          id: 'lang',
-          values: ['es', 'en'],
-          optional: false
-        }
-      ],
+      namespaces: [{ id: 'lang', values: ['es', 'en'], optional: false }],
 
       alias: {
         '/(es|en)/.+/_sidebar.md': '/$1/_sidebar.md',
@@ -280,18 +306,18 @@
       },
 
       darklightTheme: {
-        siteFont: "Outfit, Inter, Source Sans Pro, sans-serif",
+        siteFont: "Inter, sans-serif",
         defaultTheme: 'dark',
         codeFontFamily: 'Roboto Mono, monospace',
         bodyFontSize: '16px',
         dark: {
           accent: '#38bdf8',
-          background: '#030712',
+          background: '#020617',
           textColor: '#cbd5e0',
         },
         light: {
           accent: '#0ea5e9',
-          background: '#f8fafc',
+          background: '#ffffff',
           textColor: '#334155',
         }
       }
@@ -316,14 +342,7 @@
 
       langToggle.addEventListener('click', () => {
         let hash = window.location.hash;
-        let newHash;
-        if (hash.includes('/es/')) {
-          newHash = hash.replace('/es/', '/en/');
-        } else if (hash.includes('/en/')) {
-          newHash = hash.replace('/en/', '/es/');
-        } else {
-          newHash = '#/en/';
-        }
+        let newHash = hash.includes('/es/') ? hash.replace('/es/', '/en/') : hash.replace('/en/', '/es/');
         window.location.hash = newHash;
         window.location.reload();
       });
