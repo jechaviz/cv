@@ -3,10 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CV Jesús Chávez - Arquitecto de Software</title>
+  <title>JCG CV | Jesús Chávez - Arquitecto de Software</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="CV Profesional de Jesús Chávez - Arquitecto de Software Full Stack">
+  <meta name="description"
+    content="CV Profesional de Jesús Chávez - Arquitecto de Software Full Stack. Expertise en Java, Python, Fintech y Arquitectura.">
+  <meta name="author" content="Jesús Chávez Galaviz">
+  <meta name="keywords"
+    content="Software Architect, Full Stack Developer, Java, Python, Algo-trading, MQL5, PineScript, React, Node.js, Fintech, Mexico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:title" content="JCG CV | Jesús Chávez Galaviz">
+  <meta property="og:description"
+    content="Estratega de Ingeniería de Software y Arquitecto Full Stack con más de 15 años de experiencia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jechaviz.github.io/cv/">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- Inter & Outfit Fonts -->
@@ -130,7 +143,6 @@
       text-decoration: none;
       color: inherit;
       margin: 0 !important;
-      padding: 0 !important;
     }
 
     .sidebar>h1 a:hover {
@@ -195,7 +207,6 @@
     .markdown-section h2:hover {
       border-bottom-color: var(--theme-color);
       color: var(--accent-color) !important;
-      padding: 0 0 5px 0 !important;
     }
 
     .markdown-section h3 {
@@ -365,7 +376,18 @@
         bodyFontSize: '16px',
         dark: { accent: '#38bdf8', background: '#020617', textColor: '#cbd5e0' },
         light: { accent: '#0ea5e9', background: '#ffffff', textColor: '#334155' }
-      }
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function () {
+            // Dynamic Title Branding
+            const currentTitle = document.title;
+            if (currentTitle && !currentTitle.startsWith('JCG CV |')) {
+              document.title = `JCG CV | ${currentTitle}`;
+            }
+          });
+        }
+      ]
     }
   </script>
 
