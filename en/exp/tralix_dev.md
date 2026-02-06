@@ -16,11 +16,14 @@ Design and execute the technological integrations between the **Tralix** billing
 
 #### Project 1: ERP Enterprise Integration Gateway
 **Period:** Aug 2013 – Jan 2014
+
 **Objective:** Automate electronic invoice issuance directly from companies' management systems.
+
 **Specific Responsibilities**
 * Develop custom integration connectors in **XSLT** and **XML**.
 * Integrate with web services via SOAP, REST, and other protocols, tools, and integration platforms.
 * Implement security in the fiscal data transport layer during integration.
+
 **Achievements**
 * Drastic reduction of human error through the development of code generators to simplify enterprise client integration.
 

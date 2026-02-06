@@ -18,16 +18,19 @@ Liderar la construcción del equipo técnico y el framework organizacional para 
 
 #### Proyecto 1: Multinacional Visa (Organigrama & Metodología)
 **Periodo:** Nov 2025 – Ene 2026
+
 **Objetivo:** Establecer la base humana y técnica para el soporte y desarrollo de servicios financieros internacionales.
+
 **Responsabilidades específicas**
 * Contratar a 30 profesionales de TI (arquitectos, líderes, devs, devops), desarrollando la metodología de contratación con RRHH.
-* **Automatización de Gestión:** Desarrollar herramientas de scripting en **Python** para analizar repositorios existentes mediante **AST**, automatizando la generación de wikis técnicas y documentación de arquitectura.
-* **Automatización de Infraestructura:** Desarrollar scripts avanzados de **Bash** y **PowerShell** para la orquestación de entornos de desarrollo seguros y estandarizados.
+* **Automatización de Gestión:** Desarrollar herramientas de scripting en ***Python*** para analizar repositorios existentes mediante ***AST***, automatizando la generación de wikis técnicas y documentación de arquitectura.
+* **Automatización de Infraestructura:** Desarrollar scripts avanzados de ***Bash*** y ***PowerShell*** para la orquestación de entornos de desarrollo seguros y estandarizados.
 * **Gobernanza Técnica:** Establecer políticas de revisiones cruzadas (pair reviews), estándares de codificación y flujos de trabajo seguros.
+
 **Logros**
-* Conformación exitosa del equipo base de en 2 meses.
+* Conformación exitosa del equipo base en 2 meses.
 * Reducción significativa del tiempo de onboarding mediante la generación automatizada de documentación técnica y cuestionarios de entrevista técnica.
-**Nota**
-El proyecto fue cancelado por Visa por cambios en su estrategia de negocio y el proyecto no se llevó a cabo.
+* **Nota:** El proyecto fue cancelado por Visa por cambios en su estrategia de negocio y el proyecto no se llevó a cabo.
+
 **Tecnologías / Herramientas:**
 `Python (AST)` · `Bash` · `PowerShell` · `Jira/Slack API` · `Technical Governance`

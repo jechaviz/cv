@@ -10,7 +10,7 @@ Liderar la consultoría y el diseño arquitectónico de múltiples aplicaciones 
 
 ### Responsabilidades específicas
 * Actuar como **Arquitecto de Desarrollo Móvil**, diseñando aplicaciones **end-to-end (e2e)** para diversos sectores.
-* Definir el **Roadmap** técnico y realizar estimaciones de **Level of Effort (LoE)** para asegurar la viabilidad de los proyectos.
+* Definir el ***Roadmap*** técnico y realizar estimaciones de ***LoE*** (Level of Effort) para asegurar la viabilidad de los proyectos.
 * Diseñar la arquitectura técnica profunda, incluyendo la **capa de objetos**, interfaces y la modularización de sistemas.
 * Gestionar simultáneamente la arquitectura de varios proyectos críticos, asegurando estándares de calidad y escalabilidad.
 

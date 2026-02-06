@@ -10,19 +10,22 @@ Modernizar las capacidades de Backend y la arquitectura de APIs para los servici
 
 ### Responsabilidades transversales del puesto
 * Desarrollar microservicios financieros robustos bajo un sistema enterprise de cuatro ambientes (Dev, QA, UAT, Prod).
-* Garantizar la calidad del código mediante el uso intensivo de **SonarQube** y pruebas unitarias exhaustivas con **Mockito**.
-* Implementar sistemas de **Health Check** y monitoreo integrados con **LDAP** para asegurar la disponibilidad institucional.
+* Garantizar la calidad del código mediante el uso intensivo de ***SonarQube*** y pruebas unitarias exhaustivas con ***Mockito***.
+* Implementar sistemas de ***Health Check*** y monitoreo integrados con ***LDAP*** para asegurar la disponibilidad institucional.
 * Asegurar que las integraciones cumplan con los marcos de auditoría y seguridad financiera global.
 
 ### PROYECTOS RELEVANTES
 
 #### Proyecto 1: iHUB (Integration HUB for Institutional Billing)
 **Periodo:** Ago 2021 – Dic 2022
+
 **Objetivo:** Crear un punto intermedio de conexión unificado para sistemas consumidores, integrando 4 plataformas de facturación con protocolos heterogéneos.
+
 **Responsabilidades específicas**
-* Desarrollar módulos de integración para conectar sistemas vía **Microsoft OLE**, **REST**, **SOAP** y procesos asíncronos con **Kafka** / **Cron Jobs**.
+* Desarrollar módulos de integración para conectar sistemas vía ***Microsoft OLE***, ***REST***, ***SOAP*** y procesos asíncronos con ***Kafka*** / ***Cron Jobs***.
 * Actuar como "única fuente de verdad" para la disponibilidad de datos de facturación entre diversos sistemas del banco.
-* Gestionar el despliegue **on-premise** utilizando una infraestructura personalizada con **Ansible**.
+* Gestionar el despliegue ***on-premise*** utilizando una infraestructura personalizada con ***Ansible***.
+
 **Logros**
 * Crecimiento y escalabilidad del sistema iHUB mediante la adición de módulos de integración modulares.
 * Estandarización de la conectividad institucional reduciendo la complejidad técnica para los sistemas consumidores.

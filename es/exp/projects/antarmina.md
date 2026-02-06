@@ -9,8 +9,8 @@
 Desarrollar una interfaz de chat inteligente y unificada para optimizar el acceso a la información operativa, telemetría y gestión de incidentes en tiempo real.
 
 ### Responsabilidades específicas
-* Diseñar e implementar la arquitectura de chat utilizando **Amazon Connect** para la orquestación y **Amazon Bedrock** para capacidades de IA Generativa.
-* Desarrollar la lógica de negocio y conectores de integración mediante **Amazon Lambda** y **Amazon API Gateway**.
+* Diseñar e implementar la arquitectura del chat utilizando ***Amazon Connect*** para la orquestación y ***Amazon Bedrock*** para capacidades de IA Generativa.
+* Desarrollar lógica de negocio y conectores de integración mediante ***Amazon Lambda*** y ***Amazon API Gateway***.
 * Integrar sistemas críticos de la mina, incluyendo telemetría de maquinaria, sistemas de incidentes y otros procesos internos operativos.
 
 ### Logros

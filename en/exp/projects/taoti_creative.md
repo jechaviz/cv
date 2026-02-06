@@ -9,11 +9,11 @@
 Architect and develop robust, scalable, and secure backend solutions for high-visibility national projects in the USA.
 
 ### Specific Responsibilities
-* Design and scale backend architectures with **Python** and **Django** for high-visibility national applications in the USA.
+* Design and scale backend architectures with ***Python*** and ***Django*** for high-visibility national applications in the USA.
 * Lead the **removal of critical production bugs** and the stabilization of legacy platforms.
-* Execute **backend process optimization** and implement **cache layers** to improve performance under high demand.
+* Execute **backend process optimization** and implement ***cache*** layers to improve performance under high demand.
 * Develop and deploy new features (*feature expansion*) aligned with strategic client objectives.
-* Implement self-managed and scalable cloud infrastructure (**AWS**).
+* Implement self-managed and scalable cloud infrastructure (***AWS***).
 
 ### Achievements
 * Successful stabilization of government platforms by resolving operational stoppers and optimizing performance.

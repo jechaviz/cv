@@ -9,7 +9,7 @@
 Extender las capacidades de la plataforma mediante el desarrollo de nuevas características y la integración con proveedores de servicios externos críticos para la operación.
 
 ### Responsabilidades específicas
-* Desarrollar e implementar nuevas funcionalidades que expandan el alcance del ecosistema AllCalls.io.
+* Desarrollar e implementar nuevas funcionalidades que expandan el alcance del ecosistema de ***AllCalls.io***.
 * Integrar la plataforma con proveedores de servicios externos (servicios de telefonía, CRMs y herramientas de verificación de datos).
 * Colaborar en la mejora continua de características existentes, asegurando la escalabilidad del sistema.
 

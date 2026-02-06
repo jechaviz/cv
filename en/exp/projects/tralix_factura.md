@@ -9,8 +9,8 @@ Development of high-complexity billing solutions for corporate clients operating
 Develop and maintain fiscal compliance (CFDI) for massive commercial exchange in the retail and manufacturing sectors.
 
 ### Specific Responsibilities
-* Build custom XML **Addendas** under the standards of major retailers (Walmart, Soriana, Costco, etc.).
-* Implement digital signature engines and cryptographic validation in accordance with SAT Annex 20.
+* Build custom XML ***Addendas*** under the standards of major retailers (Walmart, Soriana, Costco, etc.).
+* Implement digital signature engines and cryptographic validation in accordance with ***SAT*** Annex 20.
 * Integrate the billing ecosystem with world-class ERPs.
 
 ### Achievements

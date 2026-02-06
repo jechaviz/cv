@@ -18,10 +18,13 @@ Liderar la observabilidad y automatización de la infraestructura crítica de **
 
 #### Proyecto 1: Splunk Log & Data Analysis Automation
 **Periodo:** Ene 2023 – Abr 2024
+
 **Objetivo:** Automatizar la detección de anomalías y el procesamiento de grandes volúmenes de datos mediante el análisis de logs y bases de datos globales.
+
 **Responsabilidades específicas**
-* Desarrollar procesos de backend altamente eficientes en **Python** utilizando arquitecturas **asíncronas** para el procesamiento masivo de bases de datos.
-* Arquitectar y desarrollar interfaces personalizadas en **Splunk** mediante el uso de **JS**, **HTML** y **CSS** para dashboards ejecutivos de alto impacto.
+* Desarrollar procesos de backend altamente eficientes en ***Python*** utilizando arquitecturas ***asíncronas*** para el procesamiento masivo de bases de datos.
+* Arquitectar y desarrollar interfaces personalizadas en ***Splunk*** mediante el uso de ***JS***, ***HTML*** y ***CSS*** para dashboards ejecutivos de alto impacto.
+
 **Logros**
 * Reducción proactiva de incidentes críticos mediante patrones de alerta temprana y visualización avanzada de datos.
 * Estandarización del monitoreo y reporteo técnico para unidades de negocio internacionales.

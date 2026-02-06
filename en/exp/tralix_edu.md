@@ -17,10 +17,13 @@ Design, lead, and execute the national training and technical knowledge manageme
 
 #### Project 1: Tralix Digital Learning Ecosystem
 **Period:** Jun 2010 – Oct 2012
+
 **Objective:** Centralize the company's technical knowledge into an accessible and scalable platform.
+
 **Specific Responsibilities**
-* Implement and tune the **Moodle** platform (Virtual Classroom).
+* Implement and tune the ***Moodle*** platform (Virtual Classroom).
 * Develop technical manuals and whitepapers on digital fiscal compliance.
+
 **Achievements**
 * Creation of an educational catalog that allowed remote and in-person training for thousands of users around Mexico.
 

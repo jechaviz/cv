@@ -17,11 +17,15 @@ Diseñar, liderar y ejecutar la estrategia nacional de capacitación y gestión 
 
 #### Proyecto 1: Ecosistema Digital de Aprendizaje Tralix
 **Periodo:** Jun 2010 – Oct 2012
+
 **Objetivo:** Centralizar el conocimiento técnico de la empresa en una plataforma accesible y escalable.
+
 **Responsabilidades específicas**
-* Implementar y tunear la plataforma **Moodle** (Aula Virtual).
+* Implementación y tuning de la plataforma ***Moodle*** (Aula Virtual).
 * Desarrollar manuales técnicos y whitepapers sobre cumplimiento fiscal digital.
+
 **Logros**
 * Creación de un catálogo educativo que permitió la capacitación remota y en persona de miles de usuarios alrededor de México.
+
 **Tecnologías / Herramientas:**
 `Moodle` · `Technical Documentation` · `Training Systems`

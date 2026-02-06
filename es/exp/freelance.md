@@ -14,13 +14,17 @@ Actuar como consultor técnico senior y arquitecto de soluciones para clientes g
 
 #### Proyecto 1: Algotrading & IA Mastery
 **Periodo:** Abr 2024 – Nov 2025
+
 **Objetivo:** Desarrollar sistemas de trading algorítmico de alta frecuencia y herramientas de productividad con IA.
+
 **Responsabilidades específicas**
-* Desarrollar estrategias en **MQL5** y bibliotecas asíncronas para trading.
-* Integrar soluciones basadas en LLMs como **Gemini Live**.
+* Desarrollar estrategias en ***MQL5*** y librerías asíncronas para trading.
+* Integrar soluciones basadas en LLMs como ***Gemini Live***.
+
 **Logros**
 * Creación de un framework propio para el desarrollo optimizado de bots de trading.
 * Automatización de flujos con herramientas de generación de código.
+
 **Tecnologías / Herramientas:**
 `Python` · `MQL5` · `Gemini` · `AsyncIO`
 

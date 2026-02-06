@@ -9,7 +9,7 @@
 Extend the platform's capabilities by developing new features and integrating with critical third-party service providers for the operation.
 
 ### Specific Responsibilities
-* Develop and implement new functionalities that expand the scope of the AllCalls.io ecosystem.
+* Develop and implement new features that expand the reach of the ***AllCalls.io*** ecosystem.
 * Integrate the platform with external service providers (telephony services, CRMs, and data verification tools).
 * Collaborate in the continuous improvement of existing features, ensuring system scalability.
 

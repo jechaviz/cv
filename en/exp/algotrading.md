@@ -15,26 +15,32 @@ Develop profitable, self-improving trading systems with measurable behavior by d
     * **Staking Engines:** Advanced position management and capital allocation.
     * **Governance Engines:** Risk control, operational limits, and compliance with equity rules.
     * **Opportunity Cost Engines:** Dynamic analysis for trade prioritization.
-* **Advanced Optimization:** Use of **Optuna** for hyper-parameter tuning and strategy optimization, minimizing overfitting and maximizing robustness.
-* **Multibroker Development:** Creation of Expert Advisors (EAs) in **MQL5** (MetaTrader 5) for real-world execution and rapid prototyping of indicators in **PineScript** (TradingView) as a visual strategy laboratory.
+* **Advanced Optimization:** Use of ***Optuna*** for hyper-parameter tuning and strategy optimization, minimizing overfitting and maximizing robustness.
+* **Multibroker Development:** Creation of Expert Advisors (EAs) in ***MQL5*** (MetaTrader 5) for real-world execution and rapid prototyping of indicators in ***PineScript*** (TradingView) as a visual strategy laboratory.
 * **Development Pipeline:** Robust three-stage methodology:
-    1.  **Visual Lab (PineScript):** Prototyping and visual validation of market hypotheses.
-    2.  **Quantitative Analysis (Python):** Deep modeling, statistical backtesting, and optimization with **Optuna**.
-    3.  **Real Execution (MQL5):** Implementation of the engine architecture for live trading.
+    1.  **Visual Lab** (***PineScript***): Prototyping and visual validation of market hypotheses.
+    2.  **Quantitative Analysis** (***Python***): Deep modeling, statistical backtesting, and optimization with ***Optuna***.
+    3.  **Real Execution** (***MQL5***): Implementation of the engine architecture for live trading.
 
 
 ### RELEVANT PROJECTS
 
 #### Project 1: Optimization and Prediction Framework
+**Period:** 2019 - Present
+
 **Objective:** Develop a trading framework that uses mathematical analysis to predict movements and optimize results through stochastic processes.
-**Achievements:** Stabilization of the equity curve through the implementation of volatility filters and continuous optimization with **Optuna**.
-**Technologies:** `Python` · `Optuna` · `SciPy` · `Scikit-learn` · `Nautilus Trading`
+
+**Achievements:** Stabilization of the equity curve through the implementation of volatility filters and continuous optimization with ***Optuna***.
+
+**Technologies / Tools:**
+`Python` · `Optuna` · `SciPy` · `Scikit-learn` · `Nautilus Trading`
 
 #### Project 2: Modular Signal Engines & Risk Management (MQL5)
-**Objective:** Create a trading system where risk management is independent of signal generation for real-world execution.
-**Achievements:** Implementation of strict governance over capital and modularity for the agile integration of logics previously validated in the **PineScript** laboratory.
-**Technologies:** `MQL5` · `PineScript (Visual Lab)` · `aiomql` · `Financial Mathematics`
+**Period:** 2019 - Present
 
+**Objective:** Create a trading system where risk management is independent of signal generation for real-world execution.
+
+**Achievements:** Implementation of strict governance over capital and modularity for the agile integration of logics previously validated in the ***PineScript*** laboratory.
 
 **Technologies / Tools:**
 `MQL5` · `PineScript` · `Python (aiomql)` · `MetaTrader 5` · `Nautilus Trading` · `Quantitative Development`

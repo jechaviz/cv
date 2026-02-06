@@ -10,7 +10,7 @@ Lead the consulting and architectural design of multiple mobile applications, en
 
 ### Specific Responsibilities
 * Act as **Mobile Development Architect**, designing **end-to-end (e2e)** applications for various sectors.
-* Define the technical **Roadmap** and perform **Level of Effort (LoE)** estimations to ensure project viability.
+* Define the technical ***Roadmap*** and perform ***LoE*** (Level of Effort) estimations to ensure project viability.
 * Design deep technical architecture, including the **object layer**, interfaces, and system modularization.
 * Simultaneously manage the architecture of several critical projects, ensuring quality and scalability standards.
 

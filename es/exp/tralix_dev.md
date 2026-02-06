@@ -16,11 +16,14 @@ Diseñar y ejecutar las integraciones tecnológicas entre el motor de facturaci�
 
 #### Proyecto 1: ERP Enterprise Integration Gateway
 **Periodo:** Ago 2013 – Ene 2014
+
 **Objetivo:** Automatizar la emisión de facturas electrónicas directamente desde los sistemas de gestión de las empresas.
+
 **Responsabilidades específicas**
-* Desarrollar conectores personalizados de integración en **XSLT** y **XML**.
+* Desarrollar conectores de integración personalizados en ***XSLT*** y ***XML***.
 * Integrarnos a webservices via SOAP, REST, y otros protocolos y herramientas y plataformas de integración.
 * Implementar seguridad en la capa de transporte de datos fiscales durante la integracion.
+
 **Logros**
 * Reducción drástica del error humano en por medio de desarrollo de generadores de codigo para simplificar la integracion de los clientes enterprise.
 **Tecnologías / Herramientas:**

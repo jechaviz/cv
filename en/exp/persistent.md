@@ -18,17 +18,19 @@ Lead the building of the technical team and organizational framework for a strat
 
 #### Project 1: Visa Multinational (Org Chart & Methodology)
 **Period:** Nov 2025 – Jan 2026
+
 **Objective:** Establish the human and technical foundation for the support and development of international financial services.
+
 **Specific Responsibilities**
 * Hire 30 IT professionals (architects, leads, devs, devops), developing the recruitment methodology with HR.
-* **Management Automation:** Develop scripting tools in **Python** to analyze existing repositories using **AST**, automating the generation of technical wikis and architecture documentation.
-* **Infrastructure Automation:** Develop advanced **Bash** and **PowerShell** scripts for orchestrating secure and standardized development environments.
+* **Management Automation:** Develop scripting tools in ***Python*** to analyze existing repositories using ***AST***, automating the generation of technical wikis and architecture documentation.
+* **Infrastructure Automation:** Develop advanced ***Bash*** and ***PowerShell*** scripts for orchestrating secure and standardized development environments.
 * **Technical Governance:** Establish policies for peer reviews, coding standards, and secure workflows.
+
 **Achievements**
 * Successful formation of the core team within 2 months.
 * Significant reduction in onboarding time through the automated generation of technical documentation and technical interview questionnaires.
-**Note**
-The project was canceled by Visa due to changes in their business strategy, and the project was not carried out.
+* **Note:** The project was canceled by Visa due to changes in their business strategy, and the project was not carried out.
 
 **Technologies / Tools:**
 `Python (AST)` · `Bash` · `PowerShell` · `Jira/Slack API` · `Technical Governance`

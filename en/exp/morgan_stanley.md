@@ -17,11 +17,14 @@ Lead the observability and automation of **Morgan Stanley's** critical infrastru
 ### RELEVANT PROJECTS
 
 #### Project 1: Splunk Log & Data Analysis Automation
-**Period:** Jan 2023 – Apr 2024
+**Period:** Jan 2023 – April 2024
+
 **Objective:** Automate anomaly detection and processing of large volumes of data through log analysis and global database processing.
+
 **Specific Responsibilities**
-* Develop highly efficient backend processes in **Python** using **asynchronous** architectures for massive database processing.
-* Architect and develop custom interfaces in **Splunk** using **JS**, **HTML**, and **CSS** for high-impact executive dashboards.
+* Develop highly efficient backend processes in ***Python*** using ***asynchronous*** architectures for massive database processing.
+* Architect and develop custom interfaces in ***Splunk*** using ***JS***, ***HTML***, and ***CSS*** for high-impact executive dashboards.
+
 **Achievements**
 * Proactive reduction of critical incidents through early warning patterns and advanced data visualization.
 * Standardization of monitoring and technical reporting for international business units.
