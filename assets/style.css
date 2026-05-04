@@ -94,11 +94,11 @@ body.is-locked {
 }
 
 .content {
-  padding-top: 20px !important;
+  padding-top: 72px !important;
 }
 
 body.close .content {
-  padding-top: 68px !important;
+  padding-top: 72px !important;
 }
 
 .markdown-section {
@@ -303,7 +303,7 @@ html.light .markdown-section li,
   position: fixed !important;
   top: 14px !important;
   bottom: auto !important;
-  left: calc(var(--sidebar-width) - 56px) !important;
+  left: calc(var(--sidebar-width) + 16px) !important;
   right: auto !important;
   z-index: 1001 !important;
   display: flex !important;
