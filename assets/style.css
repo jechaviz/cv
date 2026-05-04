@@ -42,13 +42,13 @@ body.light,
   --surface-2: rgba(244, 244, 245, 0.94) !important;
   --surface-3: rgba(20, 184, 166, 0.09) !important;
   --sidebar-background: rgba(255, 255, 255, 0.98) !important;
-  --sidebar-nav-link-color: #52525b !important;
-  --heading-h1-color: #115e59 !important;
+  --sidebar-nav-link-color: #3f3f46 !important;
+  --heading-h1-color: #0f766e !important;
   --heading-h2-color: #0f766e !important;
   --heading-h3-color: #92400e !important;
   --strong-color: #0f766e !important;
   --text-main: #18181b !important;
-  --text-muted: #52525b !important;
+  --text-muted: #334155 !important;
   --glass-bg: rgba(255, 255, 255, 0.9) !important;
   --glass-border: rgba(24, 24, 27, 0.1) !important;
   --glass-shadow: 0 10px 30px rgba(24, 24, 27, 0.08) !important;
@@ -97,6 +97,10 @@ body.is-locked {
   padding-top: 20px !important;
 }
 
+body.close .content {
+  padding-top: 68px !important;
+}
+
 .markdown-section {
   color: var(--text-main);
   max-width: var(--content-max-width) !important;
@@ -109,6 +113,9 @@ body.is-locked {
 .markdown-section h3 {
   font-family: var(--heading-font-family);
   letter-spacing: 0;
+  opacity: 1 !important;
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
 }
 
 .markdown-section h1 {
@@ -145,6 +152,37 @@ body.is-locked {
 .markdown-section h4 {
   color: var(--cool-accent);
   font-family: var(--heading-font-family);
+  opacity: 1 !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body.light .markdown-section h1,
+html.light .markdown-section h1,
+[data-theme='light'] .markdown-section h1 {
+  color: #0f766e !important;
+}
+
+body.light .markdown-section h2,
+html.light .markdown-section h2,
+[data-theme='light'] .markdown-section h2 {
+  color: #0f766e !important;
+  border-bottom-color: rgba(20, 184, 166, 0.36);
+}
+
+body.light .markdown-section h3,
+html.light .markdown-section h3,
+[data-theme='light'] .markdown-section h3 {
+  color: #92400e !important;
+  border-bottom-color: rgba(146, 64, 14, 0.24);
+}
+
+body.light .markdown-section p,
+body.light .markdown-section li,
+html.light .markdown-section p,
+html.light .markdown-section li,
+[data-theme='light'] .markdown-section p,
+[data-theme='light'] .markdown-section li {
+  color: #1f2937 !important;
 }
 
 .markdown-section p,
@@ -263,9 +301,10 @@ body.is-locked {
 
 .sidebar-toggle {
   position: fixed !important;
-  top: 15px !important;
+  top: 14px !important;
   bottom: auto !important;
-  left: calc(var(--sidebar-width) + 15px) !important;
+  left: calc(var(--sidebar-width) - 56px) !important;
+  right: auto !important;
   z-index: 1001 !important;
   display: flex !important;
   align-items: center;
@@ -294,6 +333,41 @@ body.is-locked {
 
 body.close .sidebar-toggle {
   left: 18px !important;
+}
+
+body.light .sidebar-toggle,
+html.light .sidebar-toggle,
+[data-theme='light'] .sidebar-toggle {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(15, 118, 110, 0.16) !important;
+}
+
+body.light .sidebar-nav li a,
+body.light .sidebar-nav li strong,
+body.light .sidebar-nav li p,
+html.light .sidebar-nav li a,
+html.light .sidebar-nav li strong,
+html.light .sidebar-nav li p,
+[data-theme='light'] .sidebar-nav li a,
+[data-theme='light'] .sidebar-nav li strong,
+[data-theme='light'] .sidebar-nav li p {
+  color: #3f3f46 !important;
+  opacity: 1 !important;
+}
+
+body.light .sidebar-nav li.active > a,
+html.light .sidebar-nav li.active > a,
+[data-theme='light'] .sidebar-nav li.active > a {
+  color: #0f766e !important;
+  background: linear-gradient(90deg, rgba(20, 184, 166, 0.13) 0%, transparent 100%) !important;
+}
+
+body.light .contact-card,
+html.light .contact-card,
+[data-theme='light'] .contact-card {
+  background: rgba(240, 253, 250, 0.86);
+  border-color: rgba(15, 118, 110, 0.18);
+  color: #3f3f46;
 }
 
 .contact-card {
@@ -487,6 +561,15 @@ body.close .settings-bar {
   margin: 0 !important;
   color: var(--text-muted);
   font-size: 0.94rem;
+}
+
+body.light .value-grid p,
+body.light .metric-strip p,
+html.light .value-grid p,
+html.light .metric-strip p,
+[data-theme='light'] .value-grid p,
+[data-theme='light'] .metric-strip p {
+  color: #334155 !important;
 }
 
 .metric-strip strong {
