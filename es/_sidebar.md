@@ -14,6 +14,10 @@
   * [Oct 23 - Abr 24 | Petco México](exp/petco.md)
   * [Ene 23 - Abr 24 | Morgan Stanley (TCS)](exp/morgan_stanley.md)
   * [Ago 21 - Dic 22 | BNY Mellon (TCS)](exp/bny_mellon.md)
-  * [2014 - 2021 | Terapixel (Startup)](exp/terapixel.md)
-  * [Jun 10 - Oct 12 | Tralix México](exp/tralix_edu.md)
-
+  * [2014 - 2021 | Terapixel](exp/terapixel.md)
+    * [Proyecto: ERPNext / Frappe](exp/projects/erpnext_custom.md)
+    * [Proyecto: Facturación Enterprise](exp/projects/tralix_factura.md)
+  * [Ago 13 - Ene 14 | Tralix Integraciones](exp/tralix_dev.md)
+  * [Jun 10 - Oct 12 | Tralix Educación](exp/tralix_edu.md)
+  * [1997 - 2013 | Docencia](exp/teaching.md)
+* [Plantilla Consolidada](plantilla_consolidada.md)

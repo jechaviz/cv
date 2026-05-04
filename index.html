@@ -6,428 +6,95 @@
   <title>JCG CV | Jesús Chávez - Arquitecto de Software</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description"
-    content="CV Profesional de Jesús Chávez - Arquitecto de Software Full Stack. Expertise en Java, Python, Fintech y Arquitectura.">
+    content="CV profesional de Jesús Chávez Galaviz: arquitecto de software, technical manager y senior full stack developer.">
   <meta name="author" content="Jesús Chávez Galaviz">
   <meta name="keywords"
-    content="Software Architect, Full Stack Developer, Java, Python, Algo-trading, MQL5, PineScript, React, Node.js, Fintech, Mexico">
+    content="Software Architect, Technical Manager, Full Stack Developer, Python, Java, JavaScript, Fintech, Algotrading, Mexico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / LinkedIn -->
   <meta property="og:title" content="JCG CV | Jesús Chávez Galaviz">
   <meta property="og:description"
-    content="Estratega de Ingeniería de Software y Arquitecto Full Stack con más de 15 años de experiencia.">
+    content="Arquitectura de software, liderazgo técnico y desarrollo full stack senior con más de 15 años de experiencia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jechaviz.github.io/cv/">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- Inter & Outfit Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
     rel="stylesheet">
 
-  <!-- Docsify v4 Themable Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themable@0/dist/css/theme-simple.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
     title="docsify-darklight-theme" type="text/css">
 
-  <style>
-    :root {
-      /* Palette - Global Branding */
-      --theme-color: #0ea5e9;
-      --accent-color: #38bdf8;
-      --sidebar-width: 300px;
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css" id="reveal-css" disabled>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="reveal-theme" disabled>
 
-      /* Typography */
-      --base-font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      --heading-font-family: 'Outfit', sans-serif;
-      --base-font-size: 16px;
-      --base-line-height: 1.8;
-
-      /* Default (Dark Mode Variables) */
-      --bg-base: #020617;
-      --sidebar-background: #020617;
-      --sidebar-nav-link-color: #94a3b8;
-      --heading-h1-color: #38bdf8;
-      --heading-h2-color: #38bdf8;
-      --heading-h3-color: #7dd3fc;
-      --strong-color: #38bdf8;
-      --glass-bg: rgba(15, 23, 42, 0.4);
-      --glass-border: rgba(255, 255, 255, 0.08);
-      --text-main: #cbd5e0;
-
-      /* Layout Defaults */
-      --content-max-width: 65em;
-      --markdown-section-padding: 0px 15px 40px;
-    }
-
-    /* Support for both .light body and data-theme approach */
-    .light body,
-    body.light,
-    [data-theme='light'] {
-      --bg-base: #ffffff;
-      --sidebar-background: #ffffff;
-      --sidebar-nav-link-color: #64748b;
-      --heading-h1-color: #0ea5e9;
-      --heading-h2-color: #0284c7;
-      --heading-h3-color: #0369a1;
-      --strong-color: #0ea5e9;
-      --glass-bg: rgba(255, 255, 255, 0.5);
-      --glass-border: rgba(0, 0, 0, 0.05);
-      --text-main: #334155;
-    }
-
-    body {
-      font-family: var(--base-font-family);
-      background-color: var(--bg-base);
-      color: var(--text-main);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin: 0;
-    }
-
-    /* Mesh Gradient - Always present but subtle */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.15;
-      background-image:
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.4) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.4) 0px, transparent 50%);
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-    }
-
-    body.light::before {
-      opacity: 0.03;
-    }
-
-    .sidebar {
-      border-right: 1px solid var(--glass-border) !important;
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-      background: var(--sidebar-background) !important;
-      padding-top: 0 !important;
-      /* Force 0 top padding */
-    }
-
-    /* Fixed/Sticky Sidebar Header */
-    .sidebar>h1 {
-      position: sticky;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      /* Extremely high priority */
-      background: var(--sidebar-background) !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border-bottom: 1px solid var(--glass-border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .sidebar>h1 a {
-      display: block;
-      padding: 10px 0 5px 0 !important;
-      /* Minimal internal padding */
-      /* Absolute top start */
-      background: var(--sidebar-background) !important;
-      text-decoration: none;
-      color: inherit;
-      margin: 0 !important;
-    }
-
-    .sidebar>h1 a:hover {
-      text-decoration: none;
-    }
-
-    .sidebar-nav li a,
-    .sidebar-nav li strong,
-    .sidebar-nav li p,
-    .sidebar-nav li {
-      font-size: 14px !important;
-      font-weight: 400 !important;
-      /* Normal weight for everything by default */
-    }
-
-    .sidebar-nav li.active>a {
-      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, transparent 100%) !important;
-      border-right: 4px solid var(--theme-color) !important;
-      color: var(--theme-color) !important;
-      font-weight: 800 !important;
-      font-size: 14px !important;
-    }
-
-    /* Content Area & Headers */
-    #main {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-
-    .markdown-section {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-
-    .markdown-section h1 {
-      font-family: var(--heading-font-family);
-      font-weight: 900;
-      font-size: 3.5rem;
-      letter-spacing: -0.06rem;
-      margin-top: 0 !important;
-      padding-top: 10px !important;
-      margin-bottom: 2rem;
-      background: linear-gradient(135deg, var(--theme-color), #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .markdown-section h2 {
-      font-family: var(--heading-font-family);
-      font-weight: 800;
-      font-size: 1.8rem;
-      color: var(--heading-h2-color) !important;
-      margin-top: 2.5rem;
-      padding-bottom: 5px;
-      border-bottom: 2px solid rgba(56, 189, 248, 0.2);
-      transition: border-color 0.3s ease, color 0.3s ease;
-      width: fit-content;
-      max-width: 100%;
-    }
-
-    .markdown-section h2:hover {
-      border-bottom-color: var(--theme-color);
-      color: var(--accent-color) !important;
-    }
-
-    .markdown-section h3 {
-      font-family: var(--heading-font-family);
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--heading-h3-color) !important;
-      margin-top: 1.5rem;
-      padding-bottom: 3px;
-      border-bottom: 1px solid rgba(125, 211, 252, 0.2);
-      width: fit-content;
-    }
-
-    .markdown-section strong {
-      color: var(--strong-color) !important;
-    }
-
-    .markdown-section blockquote {
-      background: rgba(56, 189, 248, 0.03) !important;
-      border-left: 4px solid var(--theme-color) !important;
-      padding: 1rem 1.5rem !important;
-      margin: 1.5rem 0 !important;
-    }
-
-    /* Contact Card in Sidebar */
-    .contact-card {
-      margin: 5px 15px 5px 15px;
-      padding: 10px;
-      background: rgba(15, 23, 42, 0.4);
-      border: 1px solid var(--glass-border);
-      border-radius: 8px;
-      font-size: 11.5px;
-      /* Increased legibility */
-      line-height: 1.4;
-      color: var(--sidebar-nav-link-color);
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 3px;
-      text-decoration: none !important;
-      color: inherit !important;
-      white-space: nowrap;
-    }
-
-    .contact-item span {
-      font-weight: 600;
-      color: var(--theme-color);
-      width: 12px;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    .contact-item:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Duplicate icon prevention */
-    #docsify-darklight-theme:not(.integrated) {
-      display: none !important;
-    }
-
-    .settings-bar {
-      position: fixed;
-      top: 25px;
-      right: 30px;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 8px 18px;
-      border-radius: 50px;
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    #lang-toggle {
-      background: transparent;
-      color: var(--heading-h1-color);
-      border: none;
-      font-weight: 900;
-      cursor: pointer;
-      font-family: var(--heading-font-family);
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    #docsify-darklight-theme.integrated {
-      position: static !important;
-      margin: 0 !important;
-      width: 22px !important;
-      height: 22px !important;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 768px) {
-      .markdown-section h1 {
-        font-size: 2.5rem;
-      }
-
-      .settings-bar {
-        top: 15px;
-        right: 15px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 
   <script>
-    // Theme helper
     (function () {
-      const savedTheme = window.localStorage.getItem('docsify-darklight-theme') || 'dark';
-      document.documentElement.className = savedTheme;
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      let saved = window.localStorage.getItem('docsify-darklight-theme');
+      if (!saved) {
+        saved = 'dark';
+        window.localStorage.setItem('docsify-darklight-theme', saved);
+      }
+      const isDark = saved === 'dark';
+      document.documentElement.classList.toggle('dark', isDark);
+      document.documentElement.classList.toggle('light', !isDark);
+      document.documentElement.setAttribute('data-theme', saved);
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.toggle('dark', isDark);
+        document.body.classList.toggle('light', !isDark);
+      });
     })();
-
-    // Route helper
-    if (!window.location.hash || window.location.hash === '#/') {
-      window.location.hash = '#/es/';
-    }
   </script>
 </head>
 
 <body>
-  <div class="settings-bar">
-    <button id="lang-toggle">EN</button>
+  <div class="settings-bar" aria-label="Site controls">
+    <button id="present-toggle" type="button" title="Presentar CV" aria-label="Presentar CV">
+      <span aria-hidden="true">&#9654;</span>
+      <span class="present-label">PRESENTAR</span>
+    </button>
+    <button id="theme-toggle" type="button" title="Cambiar tema" aria-label="Cambiar tema">
+      <span aria-hidden="true">&#9790;</span>
+    </button>
+    <button id="lang-toggle" type="button" title="Cambiar idioma" aria-label="Cambiar idioma">EN</button>
   </div>
+
   <div id="app">Cargando CV...</div>
 
-  <script>
-    window.$docsify = {
-      name: `<div style="text-align: center; padding-top: 10px;">
-          <span style="font-family:Outfit; font-weight:900; letter-spacing:-1px; color:#38bdf8; font-size: 1.3rem; display: block; margin-bottom: 5px; padding-top: 10px;">CV JESÚS CHÁVEZ</span>
-          <div class="contact-card" style="text-align: left;">
-            <div class="contact-item"><span>✉</span> jesus.cgalaviz@gmail.com</div>
-            <div class="contact-item"><span>✆</span> +52 4421896413</div>
-            <div class="contact-item"><span></span> github.com/jechaviz</div>
-            <div class="contact-item"><span>📍</span> Querétaro, México</div>
-          </div>
-        </div>`,
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      fallbackLanguages: ['es', 'en'],
-      namespaces: [{ id: 'lang', values: ['es', 'en'], optional: false }],
-      alias: {
-        '/(es|en)/.+/_sidebar.md': '/$1/_sidebar.md',
-        '/en/(.*)': '/en/$1',
-        '/es/(.*)': '/es/$1',
-        '^/(?!en|es)(.*)': '/es/$1'
-      },
-      themeable: {
-        readyTransition: true,
-        responsiveTables: true
-      },
-      darklightTheme: {
-        siteFont: "Inter, sans-serif",
-        defaultTheme: 'dark',
-        codeFontFamily: 'Roboto Mono, monospace',
-        bodyFontSize: '16px',
-        dark: { accent: '#38bdf8', background: '#020617', textColor: '#cbd5e0' },
-        light: { accent: '#0ea5e9', background: '#ffffff', textColor: '#334155' }
-      },
-      plugins: [
-        function (hook, vm) {
-          hook.doneEach(function () {
-            // Dynamic Title Branding
-            const currentTitle = document.title;
-            if (currentTitle && !currentTitle.startsWith('JCG CV |')) {
-              document.title = `JCG CV | ${currentTitle}`;
-            }
-          });
-        }
-      ]
-    }
-  </script>
+  <div id="reveal-container" aria-hidden="true">
+    <button id="close-present" type="button" title="Cerrar presentacion" aria-label="Cerrar presentacion">x</button>
+    <div class="reveal">
+      <div class="slides"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/exis9/squery@latest/squery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+
+  <script src="assets/script.js"></script>
+  <script src="assets/plugins/plugin-mermaid-zoom.js"></script>
+  <script src="assets/plugins/plugin-theme.js"></script>
+  <script src="assets/plugins/plugin-title.js"></script>
+  <script src="assets/plugins/plugin-presentation.js"></script>
+  <script src="assets/plugins/plugin-toc.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themable@0"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-namespaced@latest/dist/docsify-namespaced.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
-  <script>
-    window.addEventListener('load', function () {
-      const settingsBar = document.querySelector('.settings-bar');
-      const langToggle = document.getElementById('lang-toggle');
-
-      const updateLangButton = () => {
-        const isEn = window.location.hash.includes('/en/');
-        langToggle.innerText = isEn ? 'ES' : 'EN';
-      };
-
-      langToggle.addEventListener('click', () => {
-        let hash = window.location.hash;
-        let newHash = hash.includes('/es/') ? hash.replace('/es/', '/en/') : hash.replace('/en/', '/es/');
-        window.location.hash = newHash;
-        window.location.reload();
-      });
-
-      const moveThemeButton = () => {
-        const themeBtn = document.getElementById('docsify-darklight-theme');
-        if (themeBtn && settingsBar && !themeBtn.classList.contains('integrated')) {
-          themeBtn.classList.add('integrated');
-          settingsBar.appendChild(themeBtn);
-        }
-      };
-
-      updateLangButton();
-      moveThemeButton();
-      const pollTimer = setInterval(moveThemeButton, 500);
-      setTimeout(() => clearInterval(pollTimer), 5000);
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
 </body>
 
 </html>
