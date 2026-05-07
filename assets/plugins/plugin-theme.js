@@ -21,8 +21,11 @@
 
     const themeBtn = document.getElementById('theme-toggle');
     if (themeBtn) {
+      const label = isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro';
       themeBtn.innerHTML = isDark ? '<span aria-hidden="true">&#9790;</span>' : '<span aria-hidden="true">&#9728;</span>';
-      themeBtn.setAttribute('title', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+      themeBtn.setAttribute('title', label);
+      themeBtn.setAttribute('aria-label', label);
+      themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
     }
   }
 

@@ -221,23 +221,25 @@ window.$docsify = {
   ]
 };
 
-sq(function () {
-  const langToggle = sq('#lang-toggle');
-  const presentToggle = sq('#present-toggle');
+document.addEventListener('DOMContentLoaded', function () {
+  const langToggle = document.getElementById('lang-toggle');
+  const presentToggle = document.getElementById('present-toggle');
+  if (!langToggle || !presentToggle) return;
 
   function updateLabels() {
     const isEn = window.getSiteLang() === 'en';
-    langToggle.html(isEn ? 'ES' : 'EN');
-    langToggle.attr('title', isEn ? 'Switch to Spanish' : 'Cambiar a inglés');
-    presentToggle.html(
+    langToggle.textContent = isEn ? 'ES' : 'EN';
+    langToggle.setAttribute('title', isEn ? 'Switch to Spanish' : 'Cambiar a inglés');
+    langToggle.setAttribute('aria-label', isEn ? 'Switch to Spanish' : 'Cambiar a inglés');
+    presentToggle.innerHTML =
       isEn
         ? '<span aria-hidden="true">&#9654;</span><span class="present-label">PRESENT</span>'
-        : '<span aria-hidden="true">&#9654;</span><span class="present-label">PRESENTAR</span>'
-    );
-    presentToggle.attr('title', isEn ? 'Present CV' : 'Presentar CV');
+        : '<span aria-hidden="true">&#9654;</span><span class="present-label">PRESENTAR</span>';
+    presentToggle.setAttribute('title', isEn ? 'Present CV' : 'Presentar CV');
+    presentToggle.setAttribute('aria-label', isEn ? 'Present CV' : 'Presentar CV');
   }
 
-  langToggle.on('click', function () {
+  langToggle.addEventListener('click', function () {
     const nextLang = window.getSiteLang() === 'en' ? 'es' : 'en';
     window.location.hash = window.buildSiteLangHash(nextLang);
   });

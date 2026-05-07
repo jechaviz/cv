@@ -10,8 +10,13 @@
 
   const SPINNER_SLIDE = '<section class="title-slide"><h2>Loading...</h2></section>';
 
+  function getRevealSlides() {
+    return document.querySelector('#reveal-container .slides');
+  }
+
   function showSpinner() {
-    sq('#reveal-container .slides').html(SPINNER_SLIDE);
+    const slidesEl = getRevealSlides();
+    if (slidesEl) slidesEl.innerHTML = SPINNER_SLIDE;
     if (deck) deck.sync();
   }
 
@@ -296,8 +301,8 @@
     isInitializing = true;
 
     try {
-      sq('#reveal-css').removeAttr('disabled');
-      sq('#reveal-theme').removeAttr('disabled');
+      document.getElementById('reveal-css')?.removeAttribute('disabled');
+      document.getElementById('reveal-theme')?.removeAttribute('disabled');
       await new Promise(function (resolve) { setTimeout(resolve, 100); });
 
       const current = getCurrentSectionInfo();
@@ -307,9 +312,11 @@
       const sectionLabel = labelCfg[lang] || labelCfg.es || sectionInfo.id || 'CV';
       const slides = buildSlides(currentMarkdown, sectionLabel);
 
-      sq('#reveal-container .slides').html(slides.join('\n'));
-      sq('#reveal-container').attr('aria-hidden', 'false');
-      sq('body').addClass('is-presenting');
+      const slidesEl = getRevealSlides();
+      const revealContainer = document.getElementById('reveal-container');
+      if (slidesEl) slidesEl.innerHTML = slides.join('\n');
+      if (revealContainer) revealContainer.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-presenting');
 
       if (deck) {
         deck.destroy();
@@ -360,10 +367,10 @@
   }
 
   function stopPresentation() {
-    sq('body').removeClass('is-presenting');
-    sq('#reveal-container').attr('aria-hidden', 'true');
-    sq('#reveal-css').attr('disabled', 'true');
-    sq('#reveal-theme').attr('disabled', 'true');
+    document.body.classList.remove('is-presenting');
+    document.getElementById('reveal-container')?.setAttribute('aria-hidden', 'true');
+    document.getElementById('reveal-css')?.setAttribute('disabled', 'true');
+    document.getElementById('reveal-theme')?.setAttribute('disabled', 'true');
     window.sessionStorage.removeItem('restart-presentation');
 
     if (window.activeAutoNav) {
@@ -389,9 +396,9 @@
     }
   );
 
-  sq(function () {
-    sq('#present-toggle').on('click', startPresentation);
-    sq('#close-present').on('click', stopPresentation);
-    sq('#reveal-container').on('click', handlePresentationClick);
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('present-toggle')?.addEventListener('click', startPresentation);
+    document.getElementById('close-present')?.addEventListener('click', stopPresentation);
+    document.getElementById('reveal-container')?.addEventListener('click', handlePresentationClick);
   });
 })();

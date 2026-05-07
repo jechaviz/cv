@@ -25,6 +25,8 @@
   --glass-border: rgba(255, 255, 255, 0.11);
   --glass-shadow: 0 16px 42px rgba(0, 0, 0, 0.36);
   --glass-blur: blur(14px);
+  --focus-ring: #f59e0b;
+  --focus-ring-shadow: rgba(245, 158, 11, 0.28);
 
   --content-max-width: 68em;
   --markdown-section-padding: 0 18px 48px;
@@ -52,6 +54,8 @@ body.light,
   --glass-bg: rgba(255, 255, 255, 0.9) !important;
   --glass-border: rgba(24, 24, 27, 0.1) !important;
   --glass-shadow: 0 10px 30px rgba(24, 24, 27, 0.08) !important;
+  --focus-ring: #0f766e !important;
+  --focus-ring-shadow: rgba(15, 118, 110, 0.24) !important;
   --base-background: #fbfaf7 !important;
   --content-background: #fbfaf7 !important;
   --background: #fbfaf7 !important;
@@ -77,6 +81,22 @@ body {
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 42px 42px;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--focus-ring-shadow);
 }
 
 body.light {
@@ -205,6 +225,10 @@ html.light .markdown-section li,
   text-decoration: underline;
 }
 
+.markdown-section a:focus-visible {
+  border-radius: 4px;
+}
+
 .markdown-section blockquote {
   margin: 1.5rem 0 !important;
   padding: 1rem 1.25rem !important;
@@ -318,6 +342,7 @@ html.light .markdown-section li,
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   transition: transform 0.25s ease, left 0.25s ease, background 0.25s ease !important;
+  cursor: pointer;
 }
 
 .sidebar-toggle:hover {
@@ -438,6 +463,7 @@ body.close .settings-bar {
   justify-content: center;
   gap: 7px;
   height: 38px;
+  min-width: 38px;
   border: 0;
   border-radius: 8px;
   color: var(--heading-h1-color);
@@ -448,6 +474,14 @@ body.close .settings-bar {
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+#theme-toggle:active,
+#present-toggle:active,
+#lang-toggle:active,
+.sidebar-toggle:active,
+#close-present:active {
+  transform: translateY(0) scale(0.98);
 }
 
 #theme-toggle:hover,
@@ -517,6 +551,17 @@ body.close .settings-bar {
   font-family: var(--heading-font-family);
   font-size: 0.78rem;
   font-weight: 800;
+}
+
+body.light .cv-pills span,
+body.light .signal-pill,
+html.light .cv-pills span,
+html.light .signal-pill,
+[data-theme='light'] .cv-pills span,
+[data-theme='light'] .signal-pill {
+  color: #0f766e;
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(15, 118, 110, 0.25);
 }
 
 .value-grid,
@@ -868,6 +913,70 @@ body.is-presenting #reveal-container {
   color: var(--accent-color) !important;
   background: rgba(245, 158, 11, 0.1);
   border-left-color: var(--accent-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal .slides section {
+    transition: none !important;
+  }
+}
+
+@media print {
+  html,
+  body,
+  #app,
+  .content,
+  .markdown-section {
+    color: #111827 !important;
+    background: #ffffff !important;
+  }
+
+  .sidebar,
+  .sidebar-toggle,
+  .settings-bar,
+  #doc-toc,
+  #reveal-container,
+  .site-footer {
+    display: none !important;
+  }
+
+  .content {
+    left: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .markdown-section {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .markdown-section h1,
+  .markdown-section h2,
+  .markdown-section h3,
+  .markdown-section strong {
+    color: #0f766e !important;
+    -webkit-text-fill-color: currentColor !important;
+  }
+
+  .cv-hero,
+  .value-grid > div,
+  .metric-strip > div,
+  .mermaid {
+    break-inside: avoid;
+    border-color: #d1d5db !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
 }
 
 @media (max-width: 1280px) {
