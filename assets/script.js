@@ -100,6 +100,42 @@ window.addEventListener('hashchange', function () {
   window.syncDocumentLang();
 });
 
+window.syncMobileSidebarDefault = (function () {
+  const mobileQuery = '(max-width: 768px)';
+  let userToggledSidebar = false;
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia(mobileQuery).matches;
+  }
+
+  function closeIfNeeded() {
+    if (!document.body || userToggledSidebar || !isMobile()) return;
+    document.body.classList.add('close');
+  }
+
+  document.addEventListener('click', function (event) {
+    if (event.target.closest && event.target.closest('.sidebar-toggle')) {
+      userToggledSidebar = true;
+    }
+  }, true);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    closeIfNeeded();
+    setTimeout(closeIfNeeded, 120);
+    setTimeout(closeIfNeeded, 600);
+  });
+
+  window.addEventListener('resize', function () {
+    if (!isMobile()) {
+      userToggledSidebar = false;
+      return;
+    }
+    closeIfNeeded();
+  });
+
+  return closeIfNeeded;
+})();
+
 if (!window.location.hash || window.location.hash === '#/') {
   window.location.hash = '#/es/';
 }
@@ -215,6 +251,7 @@ window.$docsify = {
       hook.doneEach(function () {
         setTimeout(function () {
           window.rewriteLanguageScopedLinks();
+          window.syncMobileSidebarDefault();
         }, 50);
       });
     }
