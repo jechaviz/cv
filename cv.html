@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional CV for Jesus Chavez Galaviz, senior software engineering leader and full-stack architect.">
+  <title>Jesus Chavez Galaviz | Senior Software Engineering Leader</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <script>
+    window.__unocss = {
+      theme: {
+        colors: {
+          ink: '#151718',
+          moss: '#0f5f4a',
+          copper: '#b85d3a',
+          plum: '#4f3f71',
+          paper: '#fbfbf7',
+          mist: '#edf3ee'
+        },
+        fontFamily: {
+          sans: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          mono: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace'
+        }
+      },
+      shortcuts: {
+        'eyebrow': 'font-mono text-[0.68rem] uppercase tracking-[0.18em] font-600',
+        'soft-border': 'border border-black/10',
+        'chip': 'inline-flex max-w-full items-center gap-1.5 rounded-[6px] border border-black/10 bg-white/72 px-2.5 py-1 text-[0.72rem] font-700 text-ink/78 whitespace-normal',
+        'section-kicker': 'eyebrow text-moss',
+        'print-hidden': 'print:hidden'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #151718;
+      --moss: #0f5f4a;
+      --copper: #b85d3a;
+      --plum: #4f3f71;
+      --paper: #fbfbf7;
+      --mist: #edf3ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--mist);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        linear-gradient(135deg, rgba(15, 95, 74, 0.10), transparent 34rem),
+        linear-gradient(315deg, rgba(184, 93, 58, 0.12), transparent 32rem),
+        var(--mist);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    #app:empty::before {
+      content: "Loading CV...";
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      color: rgba(21, 23, 24, 0.68);
+      font-weight: 700;
+    }
+
+    @media print {
+      @page { size: A4; margin: 10mm; }
+
+      html,
+      body {
+        background: #fff !important;
+      }
+
+      body {
+        color: #111 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .cv-shell {
+        padding: 0 !important;
+      }
+
+      .cv-sheet {
+        border: 0 !important;
+        box-shadow: none !important;
+        min-height: auto !important;
+      }
+
+      .timeline-item,
+      .side-block {
+        break-inside: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cv-shell {
+        overflow-x: hidden;
+      }
+
+      .cv-sheet {
+        width: calc(100vw - 32px) !important;
+        max-width: calc(100vw - 32px) !important;
+      }
+
+      .cv-sheet > aside,
+      .cv-sheet > section {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden;
+        width: 100% !important;
+      }
+
+      .cv-sheet .chip {
+        min-width: 0 !important;
+        white-space: normal !important;
+      }
+
+      .cv-sheet p,
+      .cv-sheet a,
+      .cv-sheet span {
+        overflow-wrap: anywhere;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+  <script>
+    const cvSfc = `
+<template>
+  <main class="cv-shell min-h-screen px-4 py-6 text-ink sm:px-6 lg:px-8 print:px-0 print:py-0">
+    <article class="cv-sheet mx-auto grid max-w-[1180px] overflow-hidden soft-border bg-paper shadow-[0_26px_80px_rgba(21,23,24,0.16)] lg:grid-cols-[340px_minmax(0,1fr)] print:max-w-none">
+      <aside class="bg-[#f0f5ef] p-6 sm:p-8 lg:p-9 print:p-5">
+        <header class="flex items-center gap-4 lg:block">
+          <div class="grid h-20 w-20 shrink-0 place-items-center rounded-[8px] bg-ink text-paper shadow-[inset_0_-10px_30px_rgba(15,95,74,0.32)] lg:h-24 lg:w-24">
+            <span class="font-mono text-2xl font-700">JCG</span>
+          </div>
+          <div class="min-w-0 lg:mt-6">
+            <p class="eyebrow text-copper">{{ copy.identity.role }}</p>
+            <h1 class="mt-2 text-3xl font-800 leading-[0.98] text-ink sm:text-4xl lg:text-[2.72rem]">
+              {{ copy.identity.name }}
+            </h1>
+          </div>
+        </header>
+
+        <section class="side-block mt-8">
+          <h2 class="section-kicker">{{ copy.sections.contact }}</h2>
+          <ul class="mt-4 grid gap-3 text-[0.92rem] text-ink/82">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-location-dot mt-1 w-4 text-moss"></i>
+              <span>{{ copy.identity.location }}</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-envelope mt-1 w-4 text-moss"></i>
+              <a class="break-all hover:text-moss" :href="'mailto:' + contact.email">{{ contact.email }}</a>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-mobile-screen-button mt-1 w-4 text-moss"></i>
+              <a class="hover:text-moss" :href="contact.phoneHref">{{ contact.phone }}</a>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-brands fa-github mt-1 w-4 text-moss"></i>
+              <a class="break-all hover:text-moss" :href="contact.github.url" target="_blank" rel="noreferrer">{{ contact.github.text }}</a>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-brands fa-linkedin mt-1 w-4 text-moss"></i>
+              <a class="break-all hover:text-moss" :href="contact.linkedin.url" target="_blank" rel="noreferrer">{{ contact.linkedin.text }}</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="side-block mt-8">
+          <h2 class="section-kicker">{{ copy.sections.strengths }}</h2>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span v-for="strength in strengths" :key="strength" class="chip">{{ strength }}</span>
+          </div>
+        </section>
+
+        <section class="side-block mt-8">
+          <h2 class="section-kicker">{{ copy.sections.stack }}</h2>
+          <div class="mt-4 grid gap-4">
+            <div v-for="group in stack" :key="group.label">
+              <h3 class="text-[0.78rem] font-800 uppercase text-ink/62">{{ group.label }}</h3>
+              <p class="mt-1 text-[0.9rem] leading-6 text-ink/80">{{ group.items.join(' / ') }}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="side-block mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+          <div>
+            <h2 class="section-kicker">{{ copy.sections.education }}</h2>
+            <div class="mt-4 border-l-3 border-moss/70 pl-4">
+              <p class="font-800">{{ copy.education.degree }}</p>
+              <p class="mt-1 text-sm text-ink/70">{{ copy.education.period }}</p>
+              <p class="mt-1 text-sm font-700 text-copper">{{ copy.education.gpa }}</p>
+            </div>
+          </div>
+          <div>
+            <h2 class="section-kicker">{{ copy.sections.language }}</h2>
+            <div class="mt-4 flex items-center justify-between gap-3 border-l-3 border-plum/70 pl-4">
+              <span class="font-800">{{ copy.language.name }}</span>
+              <span class="rounded-[6px] bg-white px-2.5 py-1 text-xs font-800 text-plum soft-border">{{ copy.language.level }}</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="p-6 sm:p-8 lg:p-10 print:p-5">
+        <nav class="mb-8 flex flex-wrap items-center justify-between gap-3 print-hidden">
+          <div class="flex flex-wrap gap-2">
+            <a v-for="link in quickLinks" :key="link.href" :href="link.href" class="chip hover:border-moss hover:text-moss">
+              <i :class="link.icon"></i>
+              {{ link.label }}
+            </a>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="flex gap-1 rounded-[6px] bg-white/70 p-1 soft-border" role="group" :aria-label="copy.actions.languageLabel">
+              <button
+                v-for="option in localeOptions"
+                :key="option.code"
+                type="button"
+                class="rounded-[5px] px-2.5 py-1 text-xs font-800 transition"
+                :class="locale === option.code ? 'bg-ink text-paper' : 'text-ink/70 hover:text-moss'"
+                :aria-pressed="locale === option.code"
+                @click="setLocale(option.code)"
+              >
+                {{ option.short }}
+              </button>
+            </div>
+            <button type="button" class="chip cursor-pointer bg-ink text-paper hover:bg-moss" @click="printCv">
+              <i class="fa-solid fa-print"></i>
+              {{ copy.actions.print }}
+            </button>
+          </div>
+        </nav>
+
+        <header class="border-b border-black/10 pb-7">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="chip border-moss/20 bg-moss/8 text-moss">{{ copy.hero.badges[0] }}</span>
+            <span class="chip border-copper/20 bg-copper/8 text-copper">{{ copy.hero.badges[1] }}</span>
+          </div>
+          <h2 class="mt-5 max-w-[850px] text-4xl font-800 leading-[1.02] text-ink sm:text-5xl lg:text-[4.2rem]">
+            {{ copy.hero.title }}
+          </h2>
+          <p class="mt-5 max-w-[790px] text-[1.04rem] leading-8 text-ink/76">
+            {{ copy.hero.summary }}
+          </p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-3">
+            <div v-for="metric in metrics" :key="metric.label" class="soft-border bg-white/65 p-4">
+              <p class="text-2xl font-800 text-ink">{{ metric.value }}</p>
+              <p class="mt-1 text-sm leading-5 text-ink/65">{{ metric.label }}</p>
+            </div>
+          </div>
+        </header>
+
+        <section id="experience" class="mt-8">
+          <div class="flex items-end justify-between gap-4">
+            <div>
+              <p class="section-kicker">{{ copy.sections.experience }}</p>
+              <h2 class="mt-2 text-2xl font-800 text-ink">{{ copy.sections.timeline }}</h2>
+            </div>
+          </div>
+
+          <div class="mt-6 grid gap-5">
+            <article v-for="job in experience" :key="job.company + job.from" class="timeline-item grid gap-4 border-l-3 border-black/10 pl-5 sm:grid-cols-[150px_minmax(0,1fr)] sm:pl-0">
+              <div class="sm:border-r sm:border-black/10 sm:pr-5">
+                <p class="font-mono text-[0.78rem] font-700 text-moss">{{ job.from }} - {{ job.to }}</p>
+                <p class="mt-2 text-sm text-ink/58">{{ job.location }}</p>
+                <span v-if="job.current" class="mt-3 inline-flex rounded-[6px] bg-moss/10 px-2 py-1 text-[0.7rem] font-800 uppercase text-moss">{{ copy.labels.current }}</span>
+              </div>
+              <div class="pb-1 sm:pl-5">
+                <h3 class="text-xl font-800 leading-tight text-ink">{{ job.title }}</h3>
+                <p class="mt-1 font-700 text-copper">{{ job.company }}</p>
+                <p class="mt-3 leading-7 text-ink/76">{{ job.summary }}</p>
+                <div v-if="job.tags?.length" class="mt-3 flex flex-wrap gap-2">
+                  <span v-for="tag in job.tags" :key="tag" class="rounded-[6px] bg-[#eef3ee] px-2 py-1 text-[0.72rem] font-800 text-ink/68 soft-border">{{ tag }}</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="mt-9 border-t border-black/10 pt-7">
+          <p class="section-kicker">{{ copy.sections.skills }}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span v-for="skill in applicationSkills" :key="skill" class="rounded-[6px] bg-white/72 px-2.5 py-1.5 text-[0.78rem] font-700 text-ink/72 soft-border">{{ skill }}</span>
+          </div>
+        </section>
+      </section>
+    </article>
+  </main>
+</template>
+
+<script>
+export default {
+  name: 'ProfessionalCv',
+  setup() {
+    const { computed, ref, watchEffect } = Vue;
+
+    const shared = {
+      contact: {
+        email: 'jesus.cgalaviz@gmail.com',
+        phone: '+52 442 189 6413',
+        phoneHref: 'tel:+524421896413',
+        github: { text: 'github.com/jechaviz', url: 'https://github.com/jechaviz' },
+        linkedin: { text: 'linkedin.com/in/jechaviz', url: 'https://www.linkedin.com/in/jechaviz/' }
+      },
+      skills: [
+        'AHK 2',
+        'Amazon API Gateway',
+        'Amazon Bedrock',
+        'Amazon Connect',
+        'Angular',
+        'Ansible',
+        'AWS CloudWatch',
+        'AWS EKS',
+        'AWS Lambda',
+        'Bash',
+        'Bootstrap',
+        'C',
+        'CI/CD',
+        'CloudFormation',
+        'Confluence',
+        'Cross-Functional Leadership',
+        'CSS3',
+        'DaisyUI',
+        'DDD',
+        'Django'
+      ],
+      stack: [
+        { id: 'cloud', items: ['Amazon Bedrock', 'Amazon Connect', 'API Gateway', 'CloudFormation', 'CloudWatch', 'Lambda', 'EKS'] },
+        { id: 'frontend', items: ['Vue 3', 'React', 'Angular', 'React Native', 'Flutter', 'CSS3', 'Bootstrap', 'DaisyUI'] },
+        { id: 'backend', items: ['Java', 'Spring Boot', 'Python', 'Laravel', 'Django', 'GraphQL', 'REST', 'SOAP', 'Redis'] },
+        { id: 'delivery', items: ['CI/CD', 'Ansible', 'Bash', 'DDD', 'Confluence', 'Agile', 'Splunk'] }
+      ],
+      links: [
+        { id: 'email', href: 'mailto:jesus.cgalaviz@gmail.com', icon: 'fa-solid fa-envelope' },
+        { id: 'github', href: 'https://github.com/jechaviz', icon: 'fa-brands fa-github' },
+        { id: 'linkedin', href: 'https://www.linkedin.com/in/jechaviz/', icon: 'fa-brands fa-linkedin' }
+      ],
+      experienceBase: [
+        { id: 'yeaip', company: 'YEAIP SOLUCIONES SA DE CV', locationId: 'qroQro', from: '02/2026', current: true },
+        { id: 'upwork', company: 'Upwork Freelancer', locationId: 'remote', from: '04/2024', current: true },
+        { id: 'persistent', company: 'Persistent Systems SA de CV', locationId: 'qroQro', from: '11/2025', to: '01/2026', current: false },
+        { id: 'pecto', company: 'Pecto Mexico', locationId: 'mexico', from: '10/2023', to: '04/2024', current: false },
+        { id: 'tcsLeader', company: 'Tata Consultancy Services', locationId: 'mexico', from: '01/2023', to: '10/2023', current: false },
+        { id: 'tcsConsultant', company: 'Tata Consultancy Services', locationId: 'qroMexico', from: '08/2021', to: '12/2022', current: false },
+        { id: 'terapixel', company: 'Terapixel S.A de C.V', locationId: 'qroMexico', from: '02/2014', to: '01/2021', current: false },
+        { id: 'tralixEngineer', company: 'Tralix Mexico S. de R.L. de C.V.', locationId: 'mexico', from: '08/2013', to: '01/2014', current: false },
+        { id: 'independentTeacher', company: 'Independent', locationId: 'qroMexico', from: '01/1997', to: '02/2013', current: false },
+        { id: 'tralixEducation', company: 'Tralix Mexico S. de R.L. de C.V.', locationId: 'qroMexico', from: '06/2010', to: '10/2012', current: false }
+      ]
+    };
+
+    const localeCopies = {
+      en: {
+        localeMeta: { label: 'English', short: 'EN' },
+        meta: {
+          title: 'Jesus Chavez Galaviz | Senior Software Engineering Leader',
+          description: 'Professional CV for Jesus Chavez Galaviz, senior software engineering leader and full-stack architect.'
+        },
+        identity: {
+          name: 'Jesus Chavez Galaviz',
+          role: 'Senior Engineering Leader',
+          location: 'Queretaro, Mexico'
+        },
+        actions: {
+          print: 'Print / PDF',
+          languageLabel: 'CV language'
+        },
+        sections: {
+          contact: 'Contact',
+          strengths: 'Core Strengths',
+          stack: 'Selected Stack',
+          education: 'Education',
+          language: 'Language',
+          experience: 'Experience',
+          timeline: 'Professional Timeline',
+          skills: 'Application Skill Set'
+        },
+        labels: {
+          current: 'Current',
+          present: 'Present'
+        },
+        education: {
+          degree: 'Bachelors, Computer Engineering',
+          period: '2021 - 2022',
+          gpa: 'GPA 9.78'
+        },
+        language: {
+          name: 'English',
+          level: 'Fluent'
+        },
+        hero: {
+          badges: ['Target: Senior Manager, Software Engineering', 'Full Stack + People Manager'],
+          title: 'Full-stack architecture, cloud delivery, and engineering teams that actually ship.',
+          summary: 'Software engineering leader and multi-stack architect with hands-on depth across Java, Python, JavaScript ecosystems, cloud platforms, integrations, and AI-enabled workflows. Builds teams, defines technical direction, removes delivery blockers, and turns ambiguous product goals into working systems.'
+        },
+        metrics: [
+          { value: '30', label: 'people hired and organized for a Visa delivery initiative' },
+          { value: '8', label: 'developer team founded and managed at Pecto Mexico' },
+          { value: '10+', label: 'roles across engineering, leadership, integrations, and education' }
+        ],
+        strengths: [
+          'People management',
+          'Architecture',
+          'AI workflows',
+          'Cloud platforms',
+          'Full-stack delivery',
+          'Product direction',
+          'Technical debt',
+          'Security practices'
+        ],
+        stackLabels: {
+          cloud: 'Cloud / AI',
+          frontend: 'Frontend / Mobile',
+          backend: 'Backend / Integration',
+          delivery: 'Delivery'
+        },
+        linkLabels: {
+          email: 'Email',
+          github: 'GitHub',
+          linkedin: 'LinkedIn'
+        },
+        locations: {
+          qroQro: 'Queretaro, QRO',
+          remote: 'Remote',
+          mexico: 'Mexico',
+          qroMexico: 'Queretaro, Mexico'
+        },
+        experience: {
+          yeaip: {
+            title: 'Innovation Director',
+            summary: 'Leads company growth, creates new internal capabilities, and expands the product catalog with innovative solutions. Integrates AI workflows to accelerate software, customer pipelines, and product delivery.',
+            tags: ['AI workflows', 'Growth', 'Product innovation']
+          },
+          upwork: {
+            title: 'Full Multistack Architect and Technical Lead',
+            summary: 'Leads and unblocks client projects for DFX5, Antamina, Allcallsio, and Taoti Creative across Flutter, React Native, Python, Laravel, Vue 3, GraphQL, REST, Redis, Java, and AWS services.',
+            tags: ['Architecture', 'Vue 3', 'AWS', 'GraphQL', 'React Native']
+          },
+          persistent: {
+            title: 'IT Manager',
+            summary: 'Hired 30 people, defined working rules, organized task ownership, and prepared development, documentation, scrum, reporting, KPI, and internal course environments for a Visa project that was later cancelled.',
+            tags: ['Hiring', 'Delivery operations', 'Scrum', 'KPIs']
+          },
+          pecto: {
+            title: 'TI Manager',
+            summary: 'Founded and managed a team of 8 developers, owned hiring and team culture, set technical direction, introduced best practices, managed technical debt and security, and aligned product roadmaps with stakeholder expectations.',
+            tags: ['Team building', 'Product management', 'Security', 'Automation']
+          },
+          tcsLeader: {
+            title: 'Team Leader',
+            summary: 'Served as Splunk Team Leader and Developer for Morgan Stanley, covering Bash scripting, API development, Python scripting, Splunk log analysis, and dashboard creation with vanilla JavaScript, CSS, and HTML.',
+            tags: ['Splunk', 'Python', 'Bash', 'Dashboards']
+          },
+          tcsConsultant: {
+            title: 'Senior Consultant',
+            summary: 'Delivered API and full-stack development for Bank of New York Mellon using microservices, Java 11, Spring Boot, CI, Docker, documentation, Agile practices, TypeScript, JavaScript, Angular, and React.',
+            tags: ['Java 11', 'Spring Boot', 'Docker', 'Angular', 'React']
+          },
+          terapixel: {
+            title: 'From Developer to CTO',
+            summary: 'Created the core product used by the company and supported direct and third-party customers including Gpo Carso, Tralix, Yamaha, MercadoLibre, MaryKay, Zapaterias Pakar, El Economista, Banamex, Flecha Amarilla, and Fandeli.',
+            tags: ['CTO path', 'Java 8', 'Spring', 'Node.js', 'React', 'Vue', 'Angular']
+          },
+          tralixEngineer: {
+            title: 'Java Developer & Integration Engineer',
+            summary: 'Developed and integrated REST, SOAP, TEXT, and ERP solutions for invoicing and email platforms, implementing integration protocols and backend engineering workflows.',
+            tags: ['Java', 'REST', 'SOAP', 'ERP integrations']
+          },
+          independentTeacher: {
+            title: 'Math, Physics, Chemistry, Computing, Literature & English Teacher',
+            summary: 'Designed and taught accelerated learning methods across sciences and language, helping students achieve strong outcomes in multiple technical and academic subjects.',
+            tags: ['Teaching', 'Learning design', 'Sciences', 'English']
+          },
+          tralixEducation: {
+            title: 'Education Manager',
+            summary: 'Designed and delivered certification programs, video courses, technical manuals, and whitepapers. Managed an intranet and Moodle-based classroom for national partner training.',
+            tags: ['Training', 'Moodle', 'Documentation', 'Certifications']
+          }
+        }
+      },
+      es: {
+        localeMeta: { label: 'Español', short: 'ES' },
+        meta: {
+          title: 'Jesus Chavez Galaviz | Líder Senior de Ingeniería de Software',
+          description: 'CV profesional de Jesus Chavez Galaviz, líder senior de ingeniería de software y arquitecto full-stack.'
+        },
+        identity: {
+          name: 'Jesus Chavez Galaviz',
+          role: 'Líder Senior de Ingeniería',
+          location: 'Querétaro, México'
+        },
+        actions: {
+          print: 'Imprimir / PDF',
+          languageLabel: 'Idioma del CV'
+        },
+        sections: {
+          contact: 'Contacto',
+          strengths: 'Fortalezas Clave',
+          stack: 'Stack Seleccionado',
+          education: 'Educación',
+          language: 'Idioma',
+          experience: 'Experiencia',
+          timeline: 'Trayectoria Profesional',
+          skills: 'Habilidades de la Aplicación'
+        },
+        labels: {
+          current: 'Actual',
+          present: 'Presente'
+        },
+        education: {
+          degree: 'Licenciatura, Ingeniería en Computación',
+          period: '2021 - 2022',
+          gpa: 'Promedio 9.78'
+        },
+        language: {
+          name: 'Inglés',
+          level: 'Fluido'
+        },
+        hero: {
+          badges: ['Objetivo: Senior Manager, Software Engineering', 'Full Stack + Gestión de Personas'],
+          title: 'Arquitectura full-stack, entrega cloud y equipos de ingeniería que sí ponen sistemas en producción.',
+          summary: 'Líder de ingeniería de software y arquitecto multi-stack con profundidad práctica en Java, Python, ecosistemas JavaScript, plataformas cloud, integraciones y flujos de trabajo con IA. Construye equipos, define dirección técnica, desbloquea entregas y convierte objetivos ambiguos de producto en sistemas funcionando.'
+        },
+        metrics: [
+          { value: '30', label: 'personas contratadas y organizadas para una iniciativa de entrega con Visa' },
+          { value: '8', label: 'desarrolladores en un equipo fundado y gestionado en Pecto Mexico' },
+          { value: '10+', label: 'roles entre ingeniería, liderazgo, integraciones y educación' }
+        ],
+        strengths: [
+          'Gestión de personas',
+          'Arquitectura',
+          'Flujos con IA',
+          'Plataformas cloud',
+          'Entrega full-stack',
+          'Dirección de producto',
+          'Deuda técnica',
+          'Prácticas de seguridad'
+        ],
+        stackLabels: {
+          cloud: 'Cloud / IA',
+          frontend: 'Frontend / Mobile',
+          backend: 'Backend / Integración',
+          delivery: 'Entrega'
+        },
+        linkLabels: {
+          email: 'Email',
+          github: 'GitHub',
+          linkedin: 'LinkedIn'
+        },
+        locations: {
+          qroQro: 'Querétaro, QRO',
+          remote: 'Remoto',
+          mexico: 'México',
+          qroMexico: 'Querétaro, México'
+        },
+        experience: {
+          yeaip: {
+            title: 'Director de Innovación',
+            summary: 'Lidera el crecimiento de la empresa, crea nuevas capacidades internas y amplía el catálogo de productos con soluciones innovadoras. Integra flujos con IA para acelerar software, pipelines de clientes y entrega de producto.',
+            tags: ['Flujos con IA', 'Crecimiento', 'Innovación de producto']
+          },
+          upwork: {
+            title: 'Arquitecto Multistack Full y Líder Técnico',
+            summary: 'Lidera y desbloquea proyectos para DFX5, Antamina, Allcallsio y Taoti Creative en Flutter, React Native, Python, Laravel, Vue 3, GraphQL, REST, Redis, Java y servicios AWS.',
+            tags: ['Arquitectura', 'Vue 3', 'AWS', 'GraphQL', 'React Native']
+          },
+          persistent: {
+            title: 'Gerente de TI',
+            summary: 'Contrató 30 personas, definió reglas de trabajo, organizó ownership de tareas y preparó entornos de desarrollo, documentación, scrum, reportes, KPI y cursos internos para un proyecto con Visa que después fue cancelado.',
+            tags: ['Contratación', 'Operación de entrega', 'Scrum', 'KPIs']
+          },
+          pecto: {
+            title: 'Gerente de TI',
+            summary: 'Fundó y gestionó un equipo de 8 desarrolladores, llevó contratación y cultura de equipo, definió dirección técnica, introdujo mejores prácticas, gestionó deuda técnica y seguridad, y alineó roadmaps de producto con stakeholders.',
+            tags: ['Construcción de equipo', 'Gestión de producto', 'Seguridad', 'Automatización']
+          },
+          tcsLeader: {
+            title: 'Líder de Equipo',
+            summary: 'Trabajó como líder de equipo y desarrollador Splunk para Morgan Stanley, cubriendo scripting Bash, desarrollo de APIs, scripting Python, análisis de logs en Splunk y creación de dashboards con JavaScript vanilla, CSS y HTML.',
+            tags: ['Splunk', 'Python', 'Bash', 'Dashboards']
+          },
+          tcsConsultant: {
+            title: 'Consultor Senior',
+            summary: 'Entregó desarrollo de APIs y full-stack para Bank of New York Mellon con microservicios, Java 11, Spring Boot, CI, Docker, documentación, prácticas Agile, TypeScript, JavaScript, Angular y React.',
+            tags: ['Java 11', 'Spring Boot', 'Docker', 'Angular', 'React']
+          },
+          terapixel: {
+            title: 'De Desarrollador a CTO',
+            summary: 'Creó el producto central usado por la compañía y apoyó clientes directos y de terceros como Gpo Carso, Tralix, Yamaha, MercadoLibre, MaryKay, Zapaterías Pakar, El Economista, Banamex, Flecha Amarilla y Fandeli.',
+            tags: ['Ruta a CTO', 'Java 8', 'Spring', 'Node.js', 'React', 'Vue', 'Angular']
+          },
+          tralixEngineer: {
+            title: 'Desarrollador Java e Ingeniero de Integraciones',
+            summary: 'Desarrolló e integró soluciones REST, SOAP, TEXT y ERP para plataformas de facturación y correo, implementando protocolos de integración y flujos de ingeniería backend.',
+            tags: ['Java', 'REST', 'SOAP', 'Integraciones ERP']
+          },
+          independentTeacher: {
+            title: 'Profesor de Matemáticas, Física, Química, Computación, Literatura e Inglés',
+            summary: 'Diseñó y enseñó métodos de aprendizaje acelerado en ciencias e idiomas, ayudando a estudiantes a lograr resultados sólidos en múltiples materias técnicas y académicas.',
+            tags: ['Docencia', 'Diseño de aprendizaje', 'Ciencias', 'Inglés']
+          },
+          tralixEducation: {
+            title: 'Gerente de Educación',
+            summary: 'Diseñó e impartió programas de certificación, video cursos, manuales técnicos y whitepapers. Gestionó una intranet y aula basada en Moodle para capacitación nacional de partners.',
+            tags: ['Capacitación', 'Moodle', 'Documentación', 'Certificaciones']
+          }
+        }
+      }
+    };
+
+    const createContentRepository = ({ locales, fallbackLocale }) => ({
+      fallbackLocale,
+      hasLocale: (code) => Boolean(locales[code]),
+      listLocales: () => Object.keys(locales).map((code) => ({ code, ...locales[code].localeMeta })),
+      get: (code) => locales[code] || locales[fallbackLocale]
+    });
+
+    const createSafeStorage = (key) => ({
+      read: () => {
+        try {
+          return window.localStorage.getItem(key);
+        } catch (error) {
+          return null;
+        }
+      },
+      write: (value) => {
+        try {
+          window.localStorage.setItem(key, value);
+        } catch (error) {
+          // File:// and strict privacy modes can deny localStorage; the CV still works.
+        }
+      }
+    });
+
+    const createCvViewModel = ({ repository, storage }) => {
+      const pickBrowserLocale = () => (navigator.language || '').toLowerCase().startsWith('es') ? 'es' : repository.fallbackLocale;
+      const normalizeLocale = (code) => repository.hasLocale(code) ? code : repository.fallbackLocale;
+      const locale = ref(normalizeLocale(storage.read() || pickBrowserLocale()));
+      const copy = computed(() => repository.get(locale.value));
+      const localeOptions = repository.listLocales();
+
+      const setLocale = (code) => {
+        locale.value = normalizeLocale(code);
+        storage.write(locale.value);
+      };
+
+      const stack = computed(() => shared.stack.map((group) => ({
+        label: copy.value.stackLabels[group.id],
+        items: group.items
+      })));
+
+      const quickLinks = computed(() => shared.links.map((link) => ({
+        ...link,
+        label: copy.value.linkLabels[link.id]
+      })));
+
+      const experience = computed(() => shared.experienceBase.map((job) => ({
+        ...job,
+        location: copy.value.locations[job.locationId],
+        to: job.current ? copy.value.labels.present : job.to,
+        ...copy.value.experience[job.id]
+      })));
+
+      watchEffect(() => {
+        const meta = copy.value.meta;
+        document.documentElement.lang = locale.value;
+        document.title = meta.title;
+        const description = document.querySelector('meta[name="description"]');
+        if (description) {
+          description.setAttribute('content', meta.description);
+        }
+      });
+
+      return {
+        applicationSkills: shared.skills,
+        contact: shared.contact,
+        copy,
+        experience,
+        locale,
+        localeOptions,
+        metrics: computed(() => copy.value.metrics),
+        printCv: () => window.print(),
+        quickLinks,
+        setLocale,
+        stack,
+        strengths: computed(() => copy.value.strengths)
+      };
+    };
+
+    const contentRepository = createContentRepository({
+      locales: localeCopies,
+      fallbackLocale: 'en'
+    });
+
+    return createCvViewModel({
+      repository: contentRepository,
+      storage: createSafeStorage('jcg-cv-locale')
+    });
+  }
+};
+<\/script>
+
+<style scoped>
+.cv-sheet {
+  border-radius: 8px;
+  width: min(100%, 1180px);
+}
+
+.cv-sheet > * {
+  min-width: 0;
+}
+
+.cv-sheet p,
+.cv-sheet a,
+.cv-sheet h1,
+.cv-sheet h2,
+.cv-sheet h3,
+.cv-sheet span {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 420px) {
+  .cv-sheet {
+    border-radius: 0;
+  }
+}
+
+@media print {
+  .cv-sheet {
+    border-radius: 0;
+  }
+}
+</style>
+`;
+
+    const options = {
+      moduleCache: { vue: Vue },
+      async getFile(url) {
+        if (url === 'ProfessionalCv.vue') {
+          return cvSfc;
+        }
+        throw new Error('Unknown SFC: ' + url);
+      },
+      addStyle(textContent) {
+        const style = document.createElement('style');
+        style.textContent = textContent;
+        document.head.appendChild(style);
+      },
+      log(type, ...args) {
+        if (type === 'error') {
+          console.error(...args);
+        }
+      }
+    };
+
+    const { loadModule } = window['vue3-sfc-loader'];
+    loadModule('ProfessionalCv.vue', options)
+      .then((App) => Vue.createApp(App).mount('#app'))
+      .catch((error) => {
+        console.error(error);
+        document.getElementById('app').innerHTML = '<main style="min-height:100vh;display:grid;place-items:center;padding:24px;font-family:Inter,system-ui,sans-serif;color:#151718;"><div><h1 style="margin:0 0 12px;font-size:24px;">CV could not load</h1><p style="margin:0;color:#555;">Check the browser console for the Vue SFC loader error.</p></div></main>';
+      });
+  </script>
+</body>
+</html>
