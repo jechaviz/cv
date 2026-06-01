@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --ink: #151718;
+  --moss: #0f5f4a;
+  --copper: #b85d3a;
+  --plum: #4f3f71;
+  --paper: #fbfbf7;
+  --mist: #edf3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--mist);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(15, 95, 74, 0.10), transparent 34rem),
+    linear-gradient(315deg, rgba(184, 93, 58, 0.12), transparent 32rem),
+    var(--mist);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(15, 95, 74, 0.45);
+  outline-offset: 3px;
+}
+
+#app:empty::before {
+  content: "Loading CV...";
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: rgba(21, 23, 24, 0.68);
+  font-weight: 700;
+}
+
+.cv-shell {
+  overflow-x: hidden;
+}
+
+.cv-sheet {
+  width: min(100%, 1180px);
+  border-radius: 8px;
+}
+
+.cv-sheet > * {
+  min-width: 0;
+}
+
+.cv-sheet p,
+.cv-sheet a,
+.cv-sheet h1,
+.cv-sheet h2,
+.cv-sheet h3,
+.cv-sheet span {
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .cv-sheet {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .cv-sheet > aside,
+  .cv-sheet > section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden;
+  }
+
+  .cv-sheet .chip {
+    min-width: 0 !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .cv-sheet {
+    border-radius: 0;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    color: #111 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .cv-shell {
+    padding: 0 !important;
+  }
+
+  .cv-sheet {
+    max-width: none !important;
+    min-height: auto !important;
+    border: 0 !important;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+
+  .timeline-item,
+  .side-block {
+    break-inside: avoid;
+  }
+}
