@@ -6,9 +6,8 @@
     const repository = common.createContentRepository(locales, fallbackLocale);
     const storage = common.createSafeStorage(storageKey);
 
-    const browserLocale = (navigator.language || '').toLowerCase().startsWith('es') ? 'es' : fallbackLocale;
     const normalizeLocale = (code) => repository.hasLocale(code) ? code : fallbackLocale;
-    const locale = ref(normalizeLocale(storage.read() || browserLocale));
+    const locale = ref(normalizeLocale(storage.read() || fallbackLocale));
     const copy = computed(() => repository.get(locale.value));
 
     function setLocale(code) {

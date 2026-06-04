@@ -31,7 +31,7 @@ window.getSiteRouteInfo = function (rawHash) {
   const query = hashParts.length > 1 ? '?' + hashParts.slice(1).join('?') : '';
   const segments = pathPart ? pathPart.split('/').filter(Boolean) : [];
 
-  let lang = 'es';
+  let lang = 'en';
   let pathSegments = segments;
 
   if (segments[0] === 'en' || segments[0] === 'es') {
@@ -137,7 +137,7 @@ window.syncMobileSidebarDefault = (function () {
 })();
 
 if (!window.location.hash || window.location.hash === '#/') {
-  window.location.hash = '#/es/';
+  window.location.hash = '#/en/';
 }
 
 window.SITE_CONFIG = {
@@ -171,12 +171,12 @@ window.$docsify = {
   loadNavbar: true,
   subMaxLevel: 3,
   auto2top: true,
-  fallbackLanguages: ['es', 'en'],
+  fallbackLanguages: ['en', 'es'],
 
   alias: {
     '/(es|en)/.*/_sidebar.md': '/$1/_sidebar.md',
     '/(es|en)/.*/_navbar.md': '/$1/_navbar.md',
-    '^/(?!en|es)(.*)': '/es/$1'
+    '^/(?!en|es)(.*)': '/en/$1'
   },
 
   themeable: {

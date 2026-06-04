@@ -207,7 +207,7 @@
   function getCurrentSectionInfo() {
     const cfg = window.$docsify.presentation || {};
     const sectionOrder = cfg.sections || [];
-    const route = window.getSiteRouteInfo ? window.getSiteRouteInfo() : { lang: 'es', docPath: 'README' };
+    const route = window.getSiteRouteInfo ? window.getSiteRouteInfo() : { lang: 'en', docPath: 'README' };
     const currentDoc = route.docPath || 'README';
     const sectionIndex = sectionOrder.findIndex(function (section) {
       return section.id === currentDoc || (currentDoc === '' && section.id === 'README');
