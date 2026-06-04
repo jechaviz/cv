@@ -1,6 +1,6 @@
 <template>
   <aside class="bg-[#f0f5ef] p-6 sm:p-8 lg:p-9 print:p-5">
-    <header class="flex items-center gap-4 lg:block">
+    <header class="grid gap-4 sm:flex sm:items-center lg:block">
       <div class="grid h-20 w-20 shrink-0 place-items-center rounded-[8px] bg-ink text-paper shadow-[inset_0_-10px_30px_rgba(15,95,74,0.32)] lg:h-24 lg:w-24">
         <span class="font-mono text-2xl font-700">JCG</span>
       </div>
@@ -24,7 +24,11 @@
       <div class="mt-4 grid gap-4">
         <div v-for="group in stack" :key="group.label">
           <h3 class="text-[0.78rem] font-800 uppercase text-ink/62">{{ group.label }}</h3>
-          <p class="mt-1 text-[0.9rem] leading-6 text-ink/80">{{ group.items.join(' / ') }}</p>
+          <TagList
+            :tags="group.items"
+            wrapper-class="cv-stack-tags mt-2 flex flex-wrap gap-1.5"
+            tag-class="cv-stack-tag rounded-[6px] bg-white/65 px-2 py-1 text-[0.76rem] font-700 leading-tight text-ink/72 soft-border"
+          />
         </div>
       </div>
     </SideBlock>

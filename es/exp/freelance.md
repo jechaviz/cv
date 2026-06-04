@@ -38,7 +38,7 @@ Actuar como consultor técnico senior y arquitecto de soluciones para clientes g
 
 ---
 #### Enlaces a Detalles de Proyecto:
-* [DFX5 (Miami)](exp/projects/dfx5.md)
-* [Antamina (Perú)](exp/projects/antarmina.md)
-* [Allcallsio (NY)](exp/projects/allcallsio.md)
-* [Taoti Creative (Washington)](exp/projects/taoti_creative.md)
+* [DFX5 (Miami)](projects/dfx5.md)
+* [Antamina (Perú)](projects/antarmina.md)
+* [Allcallsio (NY)](projects/allcallsio.md)
+* [Taoti Creative (Washington)](projects/taoti_creative.md)

@@ -67,6 +67,12 @@ button {
   min-width: 0;
 }
 
+.cv-sheet :where(p, a, h1, h2, h3, span, button) {
+  min-width: 0;
+  max-width: 100%;
+  word-break: normal;
+}
+
 .cv-sheet p,
 .cv-sheet a,
 .cv-sheet h1,
@@ -74,6 +80,14 @@ button {
 .cv-sheet h3,
 .cv-sheet span {
   overflow-wrap: anywhere;
+}
+
+.cv-stack-tags {
+  max-width: 100%;
+}
+
+.cv-stack-tag {
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -98,12 +112,17 @@ button {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .cv-sheet .chip {
     min-width: 0 !important;
     white-space: normal !important;
+  }
+
+  .cv-stack-tags {
+    width: min(100%, 320px);
+    max-width: 320px;
   }
 }
 

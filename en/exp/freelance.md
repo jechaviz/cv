@@ -38,7 +38,7 @@ Act as a senior technical consultant and solutions architect for high-profile gl
 
 ---
 #### Links to Project Details:
-* [DFX5 (Miami)](exp/projects/dfx5.md)
-* [Antamina (Peru)](exp/projects/antarmina.md)
-* [Allcallsio (NY)](exp/projects/allcallsio.md)
-* [Taoti Creative (Washington)](exp/projects/taoti_creative.md)
+* [DFX5 (Miami)](projects/dfx5.md)
+* [Antamina (Peru)](projects/antarmina.md)
+* [Allcallsio (NY)](projects/allcallsio.md)
+* [Taoti Creative (Washington)](projects/taoti_creative.md)

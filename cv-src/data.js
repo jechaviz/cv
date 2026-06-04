@@ -31,7 +31,7 @@
       { id: 'yeaip', company: 'YEAIP SOLUCIONES SA DE CV', locationId: 'qroQro', from: '02/2026', current: true },
       { id: 'upwork', company: 'Upwork Freelancer', locationId: 'remote', from: '04/2024', current: true },
       { id: 'persistent', company: 'Persistent Systems SA de CV', locationId: 'qroQro', from: '11/2025', to: '01/2026' },
-      { id: 'pecto', company: 'Pecto Mexico', locationId: 'mexico', from: '10/2023', to: '04/2024' },
+      { id: 'petco', company: 'Petco México', locationId: 'mexico', from: '10/2023', to: '04/2024' },
       { id: 'tcsLeader', company: 'Tata Consultancy Services', locationId: 'mexico', from: '01/2023', to: '10/2023' },
       { id: 'tcsConsultant', company: 'Tata Consultancy Services', locationId: 'qroMexico', from: '08/2021', to: '12/2022' },
       { id: 'terapixel', company: 'Terapixel S.A de C.V', locationId: 'qroMexico', from: '02/2014', to: '01/2021' },
@@ -66,7 +66,7 @@
     metrics: [
       { value: '407', label: 'hour max forecast modeled for RP Rental with explicit 10% reserve' },
       { value: '30', label: 'people I hired and organized for a Visa delivery initiative' },
-      { value: '8', label: 'developers I led in a team I founded at Pecto Mexico' }
+      { value: '8', label: 'developers I led in a team I founded at Petco Mexico' }
     ],
     strengths: ['People management', 'Architecture', 'AI workflows', 'Cloud platforms', 'Full-stack delivery', 'Product direction', 'Technical debt', 'Security practices'],
     stackLabels: { cloud: 'Cloud / AI', frontend: 'Frontend / Mobile', backend: 'Backend / Integration', enterprise: 'Enterprise / ERP', delivery: 'Delivery' },
@@ -76,7 +76,7 @@
       yeaip: { title: 'Innovation Director', summary: 'I lead company growth, create new internal capabilities, and expand the product catalog with innovative solutions. Recent work includes RP Rental Phase 2: Odoo-BAAN integration, cutoff/return billing logic, financial traceability, SDLC-level estimation, and an executable delivery Gantt.', tags: ['AI workflows', 'Odoo-BAAN', 'Billing automation', 'LoE / Gantt'] },
       upwork: { title: 'Full Multistack Architect and Technical Lead', summary: 'I lead and unblock client projects for DFX5, Antamina, Allcallsio, and Taoti Creative across Flutter, React Native, Python, Laravel, Vue 3, GraphQL, REST, Redis, Java, and AWS services.', tags: ['Architecture', 'Vue 3', 'AWS', 'GraphQL', 'React Native'] },
       persistent: { title: 'IT Manager', summary: 'I hired 30 people, defined working rules, organized task ownership, and prepared development, documentation, scrum, reporting, KPI, and internal course environments for a Visa project that was later cancelled.', tags: ['Hiring', 'Delivery operations', 'Scrum', 'KPIs'] },
-      pecto: { title: 'TI Manager', summary: 'I founded and managed a team of 8 developers, owned hiring and team culture, set technical direction, introduced best practices, managed technical debt and security, and aligned product roadmaps with stakeholder expectations.', tags: ['Team building', 'Product management', 'Security', 'Automation'] },
+      petco: { title: 'TI Manager', summary: 'I founded and managed a team of 8 developers, owned hiring and team culture, set technical direction, introduced best practices, managed technical debt and security, and aligned product roadmaps with stakeholder expectations.', tags: ['Team building', 'Product management', 'Security', 'Automation'] },
       tcsLeader: { title: 'Team Leader', summary: 'I served as Splunk Team Leader and Developer for Morgan Stanley, covering Bash scripting, API development, Python scripting, Splunk log analysis, and dashboard creation with vanilla JavaScript, CSS, and HTML.', tags: ['Splunk', 'Python', 'Bash', 'Dashboards'] },
       tcsConsultant: { title: 'Senior Consultant', summary: 'I delivered API and full-stack development for Bank of New York Mellon using microservices, Java 11, Spring Boot, CI, Docker, documentation, Agile practices, TypeScript, JavaScript, Angular, and React.', tags: ['Java 11', 'Spring Boot', 'Docker', 'Angular', 'React'] },
       terapixel: { title: 'From Developer to CTO', summary: 'I created the core product used by the company and supported direct and third-party customers including Gpo Carso, Tralix, Yamaha, MercadoLibre, MaryKay, Zapaterias Pakar, El Economista, Banamex, Flecha Amarilla, and Fandeli.', tags: ['CTO path', 'Java 8', 'Spring', 'Node.js', 'React', 'Vue', 'Angular'] },
@@ -120,7 +120,7 @@
     metrics: [
       { value: '407', label: 'horas de forecast máximo modeladas para RP Rental con reserva explícita de 10%' },
       { value: '30', label: 'personas que contraté y organicé para una iniciativa de entrega con Visa' },
-      { value: '8', label: 'desarrolladores que lideré en un equipo que fundé en Pecto Mexico' }
+      { value: '8', label: 'desarrolladores que lideré en un equipo que fundé en Petco México' }
     ],
     strengths: ['Gestión de personas', 'Arquitectura', 'Flujos con IA', 'Plataformas cloud', 'Entrega full-stack', 'Dirección de producto', 'Deuda técnica', 'Prácticas de seguridad'],
     stackLabels: { cloud: 'Cloud / IA', frontend: 'Frontend / Mobile', backend: 'Backend / Integración', enterprise: 'Enterprise / ERP', delivery: 'Entrega' },
@@ -130,7 +130,7 @@
       yeaip: { title: 'Director de Innovación', summary: 'Lidero el crecimiento de la empresa, creo nuevas capacidades internas y amplío el catálogo de productos con soluciones innovadoras. Trabajo reciente: RP Rental Fase 2 con integración Odoo-BAAN, lógica de facturación por corte/retornos, trazabilidad financiera, estimación SDLC y Gantt ejecutable.', tags: ['Flujos con IA', 'Odoo-BAAN', 'Automatización de facturación', 'LoE / Gantt'] },
       upwork: { title: 'Arquitecto Multistack Full y Líder Técnico', summary: 'Lidero y desbloqueo proyectos para DFX5, Antamina, Allcallsio y Taoti Creative en Flutter, React Native, Python, Laravel, Vue 3, GraphQL, REST, Redis, Java y servicios AWS.', tags: ['Arquitectura', 'Vue 3', 'AWS', 'GraphQL', 'React Native'] },
       persistent: { title: 'Gerente de TI', summary: 'Contraté 30 personas, definí reglas de trabajo, organicé ownership de tareas y preparé entornos de desarrollo, documentación, scrum, reportes, KPI y cursos internos para un proyecto con Visa que después fue cancelado.', tags: ['Contratación', 'Operación de entrega', 'Scrum', 'KPIs'] },
-      pecto: { title: 'Gerente de TI', summary: 'Fundé y gestioné un equipo de 8 desarrolladores, llevé contratación y cultura de equipo, definí dirección técnica, introduje mejores prácticas, gestioné deuda técnica y seguridad, y alineé roadmaps de producto con stakeholders.', tags: ['Construcción de equipo', 'Gestión de producto', 'Seguridad', 'Automatización'] },
+      petco: { title: 'Gerente de TI', summary: 'Fundé y gestioné un equipo de 8 desarrolladores, llevé contratación y cultura de equipo, definí dirección técnica, introduje mejores prácticas, gestioné deuda técnica y seguridad, y alineé roadmaps de producto con stakeholders.', tags: ['Construcción de equipo', 'Gestión de producto', 'Seguridad', 'Automatización'] },
       tcsLeader: { title: 'Líder de Equipo', summary: 'Trabajé como líder de equipo y desarrollador Splunk para Morgan Stanley, cubriendo scripting Bash, desarrollo de APIs, scripting Python, análisis de logs en Splunk y creación de dashboards con JavaScript vanilla, CSS y HTML.', tags: ['Splunk', 'Python', 'Bash', 'Dashboards'] },
       tcsConsultant: { title: 'Consultor Senior', summary: 'Entregué desarrollo de APIs y full-stack para Bank of New York Mellon con microservicios, Java 11, Spring Boot, CI, Docker, documentación, prácticas Agile, TypeScript, JavaScript, Angular y React.', tags: ['Java 11', 'Spring Boot', 'Docker', 'Angular', 'React'] },
       terapixel: { title: 'De Desarrollador a CTO', summary: 'Creé el producto central usado por la compañía y apoyé clientes directos y de terceros como Gpo Carso, Tralix, Yamaha, MercadoLibre, MaryKay, Zapaterías Pakar, El Economista, Banamex, Flecha Amarilla y Fandeli.', tags: ['Ruta a CTO', 'Java 8', 'Spring', 'Node.js', 'React', 'Vue', 'Angular'] },
